@@ -1,12 +1,14 @@
 package Backend;
 
+import java.util.ArrayList;
+
 public class Hotel {
 
     //Variables
 
     public int roomAmount;
     public String location;
-    public String amenities;
+    ArrayList<String> amenities = new ArrayList<String>();
     private int numEmployees;
 
     //Constructors
@@ -14,11 +16,10 @@ public class Hotel {
     public Hotel() {
         this.roomAmount = 0;
         this.location = "";
-        this.amenities = "";
         this.numEmployees = 0;
     }
 
-    public Hotel(int roomNum, String loc, String am, int numEm) {
+    public Hotel(int roomNum, String loc, ArrayList<String> am, int numEm) {
         if (roomNum >= 0) {
             this.roomAmount = roomNum;
         } else {
@@ -26,7 +27,7 @@ public class Hotel {
         }
 
         this.location = loc;
-        this.amenities = am;
+        this.amenities.addAll(am);
 
         if (numEm >= 0) {
         this.numEmployees = numEm;
@@ -55,15 +56,30 @@ public class Hotel {
         return this.location;
     }
 
-    //Should amenities be stored inside of a String array?
 
-    public void setAmenities(String amenities) {
-        this.amenities = amenities;
+    //Methods for amenities, since its an ArrayList this can be appended to or modified even more
+
+    public void addAmenity(String amenity) {
+        this.amenities.add(amenity);
     }
 
-    public String getAmenities() {
+    public void removeAmenity(int index) {
+        this.amenities.remove(index);
+    }
+
+    public ArrayList<String> getAmenitiesArray() {
         return this.amenities;
     }
+
+    public String getAmenitiesString() {
+        return this.amenities.toString();
+    }
+
+    public String getAmenityFromIndex(int index) {
+        return this.amenities.get(index);
+    }
+
+    //End of Amenities Methods
 
     public void setNumEmployees(int num) {
         if (num >= 0) {
