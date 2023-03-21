@@ -1,6 +1,6 @@
 package Backend;
 
-public class Employee{
+public class Employee extends Person{
 
 
     //public Boolean employee;
@@ -23,9 +23,14 @@ public class Employee{
         this.employeeId = employeeId;
     }
 
-    public void EmployeeName(Employee Employee)
+    public void setEmployeeName(Employee Employee, String newEmployeeName)
     {
-        
+        Employee.name = newEmployeeName;
+    }
+
+    public void getEmployeeName(Employee Employee)
+    {
+        return Employee.name;
     }
 
     public void setEmployeeID(Employee Employee, String employeeId) {
