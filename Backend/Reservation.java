@@ -13,7 +13,7 @@ public class Reservation {
 
     private Reservation() {
         Random rand = new Random();
-        reservationID = rand.nextInt();
+        this.reservationID = rand.nextInt();
     }
 
     public Reservation(int reservationID, Customer customer, Date start, 
