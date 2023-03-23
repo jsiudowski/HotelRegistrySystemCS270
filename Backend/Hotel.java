@@ -100,6 +100,10 @@ public class Hotel {
         return this.floors.get(index);
     }
 
+    public int getFloorAmount() {
+        return this.floors.size();
+    }
+
     //Methods for Rooms
 
 }
