@@ -10,10 +10,10 @@ public class Employee extends Person{
 
     public Employee()
     {
-        //employee = true;
         employeeId = "";
         position = "";
         Ssn = "";
+        Person.employee = true;
     }
 
     public Employee(Boolean employee, String position, String Ssn, String employeeId) {
@@ -62,7 +62,7 @@ public class Employee extends Person{
 
     public String getEmployeePosition(Employee Employee) {
         return Employee.position;
-        return Person.employee = true;
+        
     }
 
 }
