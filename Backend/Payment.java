@@ -29,8 +29,8 @@ public class Payment {
         System.out.print("Enter Card Holder Name");
         cardHolder = scanner.nextLine();
     }
-    public String getCardHolder(Payment cardHolder){
-        return Payment.cardHolder;
+    public String getCardHolder(Payment payment){
+        return payment.cardHolder;
     }
 
     public void setCardNumber(){
@@ -38,32 +38,32 @@ public class Payment {
         cardNumber = scanner.nextLine();
     }
 
-    public String getCardNumber(){
-        return Payment.cardNumber;
+    public String getCardNumber(Payment payment){
+        return payment.cardNumber;
     }
     public void setSecurityCode(){
         System.out.print("Enter security code");
         cardSecurityCode = scanner.nextLine();
     }
 
-    public int getSecurityCode(){
-        return Payment.cardSecurityCode;
+    public String getSecurityCode(Payment payment){
+        return payment.cardSecurityCode;
     }
     public void setCardExpiration(){
         System.out.print("Enter card expiration date");
         cardExpiration = scanner.nextLine();
     }
 
-    public int getCardExpiration(){
-        return Payment.cardExpiration;
+    public String getCardExpiration(Payment payment){
+        return payment.cardExpiration;
     }
     public void setZipCode(){
         System.out.print("Enter zip code");
         zipCode = scanner.nextLine();
     }
 
-    public int getZipCode(){
-        return Payment.zipCode;
+    public String getZipCode(Payment payment){
+        return payment.zipCode;
 
     }
     public void setBillingAddress(){
@@ -71,7 +71,7 @@ public class Payment {
         billingAddress = scanner.nextLine();
     }
 
-    public int getBillingAddress(){
-        return Payment.billingAddress;
+    public String getBillingAddress(Payment payment){
+        return payment.billingAddress;
     }
 }
