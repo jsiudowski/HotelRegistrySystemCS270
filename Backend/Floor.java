@@ -3,32 +3,27 @@ package Backend;
 public class Floor {
     
     //Variables
-    public int floorNum;
+    public int floorId;
     public Hotel hotelId;
 
     //Constructor
     public Floor(Hotel hotel, int num) {
         this.hotelId = hotel;
-        this.floorNum = num;
+        this.floorId = num;
+        hotel.addFloor(this);
     }
 
     //Methods
-    public int getFloorNum(Hotel hotel) {
-        return this.floorNum;
+    public int getFloorId(Hotel hotel) {
+        return this.floorId;
     }
 
-    public void setFloorNum(Hotel hotel, int num) {
-        this.floorNum = num;
+    public void setFloorId(Hotel hotel, int num) {
+        this.floorId = num;
     }
 
     public Hotel getFloorHotel() {
         return this.hotelId;
     }
-
-    public void setFloorHotel(Hotel hotel) {
-        this.hotelId = hotel;
-    }
-
-    //Its worth considering that a hotel can have mutliple floors
 
 }
