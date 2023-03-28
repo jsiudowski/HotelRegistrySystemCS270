@@ -25,6 +25,14 @@ public class Room {
 
     }
 
+    public Hotel getRoomHotel() {
+        return this.hotelId;
+    }
+
+    public Floor getRoomFloor() {
+        return this.floorId;
+    }
+
 
     
 }

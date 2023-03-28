@@ -106,4 +106,22 @@ public class Hotel {
 
     //Methods for Rooms
 
+    public void addRoom(Room room) {
+        
+        this.rooms.add(room); //should we make a conditional where we cannot add more rooms than what is available on the floor
+    }
+
+    // didnt add the delete room list till we decide what we want to do with deleting floors
+    public ArrayList<Room> getRoomList() {
+        return this.rooms;
+    }
+    
+    public Room getRoomByIndex (int index) {
+        return this.rooms.get(index);
+    }
+
+
+
+
+
 }
