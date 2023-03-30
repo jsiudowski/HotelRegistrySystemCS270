@@ -1,5 +1,8 @@
 package Hotel.Registry.System.hotelsystem.model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public abstract class Person {
 
     public String name;

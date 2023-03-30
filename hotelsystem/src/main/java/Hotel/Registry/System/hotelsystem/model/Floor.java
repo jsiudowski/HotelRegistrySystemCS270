@@ -1,9 +1,14 @@
 package Hotel.Registry.System.hotelsystem.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Floor {
     
     //Variables
-    public int floorId;
+    public @Id @GeneratedValue int floorId;
     public Hotel hotelId;
 
     //Constructor

@@ -1,27 +1,30 @@
 package Hotel.Registry.System.hotelsystem.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Employee extends Person{
 
 
     //public Boolean employee;
     public String position;
     private String Ssn;
-    public String employeeId;
+    public @Id @GeneratedValue int employeeId;
 
-    public Employee()
+    protected Employee()
     {
-        employeeId = "";
         position = "";
         Ssn = "";
         //Person.employee = true;
         //The compiler doesn't like this^
     }
 
-    public Employee(Boolean employee, String position, String Ssn, String employeeId) {
+    public Employee(Boolean employee, String position, String Ssn) {
         //this.employee = true;
         this.position = position;
         this.Ssn = Ssn;
-        this.employeeId = employeeId;
     }
 
     // employee Name 
@@ -47,11 +50,11 @@ public class Employee extends Person{
     }
 
     // employee ID 
-    public void setEmployeeID(Employee Employee, String employeeId) {
+    public void setEmployeeID(Employee Employee, int employeeId) {
         Employee.employeeId = employeeId;
     }
 
-    public String getEmployeeID(Employee Employee) {
+    public int getEmployeeID(Employee Employee) {
         return Employee.employeeId;
     }
 

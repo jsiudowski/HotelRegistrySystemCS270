@@ -30,3 +30,15 @@ For the time being, I've commented out the line
 Added repository and controller to fit our structure into an actual MVC pattern.  
 Now I'm going to go and actually do some more research on Spring framework and MVC patterns.  
 
+### _Editing the classes_
+Using Java Persistent API, the various objects will be edited.  
+I'm going through each of the classes and labeling them as @Entity's.  
+Then I'm going to add @Id and @GeneratedValue using JPA.  
+@Entity denotes this class for storage in a relational table.  
+@Id and @GeneratedValue identify the primary key and auto generate the value.  
+
+**Note: Any class with an ID is being edited to conform to this. All Ids will be int**  
+
+To-Do:  
+Floor, Hotel, Payment, Reservation, Room  
+Read JPA annotation for foreign keys and data relations

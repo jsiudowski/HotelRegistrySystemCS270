@@ -1,7 +1,13 @@
 package Hotel.Registry.System.hotelsystem.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Customer extends Person{
-    public int customerID;
+    public @Id @GeneratedValue int customerID;
+    //Check dev notes, editing classes, for annotation meanings
     public String customerName;
     public int customerAge;
 
