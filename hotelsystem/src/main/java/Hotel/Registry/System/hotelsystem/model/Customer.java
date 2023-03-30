@@ -1,4 +1,4 @@
-package Backend;
+package Hotel.Registry.System.hotelsystem.model;
 
 public class Customer extends Person{
     public int customerID;

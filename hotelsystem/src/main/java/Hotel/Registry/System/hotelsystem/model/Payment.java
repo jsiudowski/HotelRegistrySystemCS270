@@ -1,4 +1,4 @@
-package Backend;
+package Hotel.Registry.System.hotelsystem.model;
 
 import java.util.Scanner;
 
