@@ -5,12 +5,12 @@ public class Room {
     public int roomNumber;
     public String roomType;
     public Hotel hotelId;
-    public Floor floorNum;
+    public Floor floorId;
     
     //construcor 
     public Room (Hotel hotel, Floor floor, int roomNumber, String roomType) {
         this.hotelId = hotel;
-        this.floorNum = floor;
+        this.floorId = floor;
         this.roomNumber = roomNumber;
         this.roomType = roomType;
     }
@@ -23,6 +23,14 @@ public class Room {
     public String getRoomType (Room room) {
         return room.roomType;
 
+    }
+
+    public Hotel getRoomHotel() {
+        return this.hotelId;
+    }
+
+    public Floor getRoomFloor() {
+        return this.floorId;
     }
 
 

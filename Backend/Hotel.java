@@ -6,25 +6,20 @@ public class Hotel {
 
     //Variables
 
-    public int roomAmount;
     public String location;
-    ArrayList<String> amenities = new ArrayList<String>();
+    public ArrayList<String> amenities = new ArrayList<String>();
     private int numEmployees;
+    public ArrayList<Floor> floors = new ArrayList<Floor>();
+    public ArrayList<Room> rooms = new ArrayList<Room>();
 
     //Constructors
 
     public Hotel() {
-        this.roomAmount = 0;
         this.location = "";
         this.numEmployees = 0;
     }
 
     public Hotel(int roomNum, String loc, ArrayList<String> am, int numEm) {
-        if (roomNum >= 0) {
-            this.roomAmount = roomNum;
-        } else {
-            this.roomAmount = 0;
-        }
 
         this.location = loc;
         this.amenities.addAll(am);
@@ -38,14 +33,8 @@ public class Hotel {
 
     //Setters and Getters
 
-    public void setRoomAmount(int amt) {
-        if (amt >= 0) {
-            this.roomAmount = amt;
-        }
-    }
-
     public int getRoomAmount() {
-        return this.roomAmount;
+        return rooms.size();
     }
 
     public void setLocation(String loc) {
@@ -90,6 +79,49 @@ public class Hotel {
     public int getNumEmployees() {
         return this.numEmployees;
     }
+
+    //Methods for Floors
+
+    public void addFloor(Floor floor) {
+        this.floors.add(floor);
+    }
+
+    public void removeFloorByIndex(int index) {
+        this.floors.remove(index);
+        //Do we want to delete the floor if we remove it from the hotel's list?
+        //this.floors.set(index, null); Something along these lines...
+    }
+
+    public ArrayList<Floor> getFloorList() {
+        return this.floors;
+    }
+
+    public Floor getFloorByIndex(int index) {
+        return this.floors.get(index);
+    }
+
+    public int getFloorAmount() {
+        return this.floors.size();
+    }
+
+    //Methods for Rooms
+
+    public void addRoom(Room room) {
+        
+        this.rooms.add(room); //should we make a conditional where we cannot add more rooms than what is available on the floor
+    }
+
+    // didnt add the delete room list till we decide what we want to do with deleting floors
+    public ArrayList<Room> getRoomList() {
+        return this.rooms;
+    }
+    
+    public Room getRoomByIndex (int index) {
+        return this.rooms.get(index);
+    }
+
+
+
 
 
 }
