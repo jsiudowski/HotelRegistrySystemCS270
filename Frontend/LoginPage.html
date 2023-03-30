@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="OurHomePagestyle.css">
+
+    <a href="OurHomePage.html">
+        <h4>Back To Home</h4>
+        <link rel="stylesheet">
+    </a>
+  </head>
+  <body>
+    <header>
+      <h1>Login</h1>
+    </header>
+    
+    <main>
+      <form action="" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label>
+            <input type="radio" name="account-type" value="customer">
+            Customer
+        </label>
+          
+          <label>
+            <input type="radio" name="account-type" value="employee">
+            Employee
+          </label>
+          
+          <label>
+            <input type="radio" name="account-type" value="owner">
+            Owner
+          </label>
+        <button id="signUp" onclick="window.location.href = 'SignUp.html';">Click Here to Sign Up</button>
+        <br/>
+        <button type="submit">Login</button>
+      </form>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 Infinite Room, Inc.</p>
+    </footer>
+  </body>
+</html>
