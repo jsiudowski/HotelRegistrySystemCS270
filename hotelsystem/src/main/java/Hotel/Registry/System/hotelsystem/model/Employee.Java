@@ -13,7 +13,8 @@ public class Employee extends Person{
         employeeId = "";
         position = "";
         Ssn = "";
-        Person.employee = true;
+        //Person.employee = true;
+        //The compiler doesn't like this^
     }
 
     public Employee(Boolean employee, String position, String Ssn, String employeeId) {

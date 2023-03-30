@@ -7,10 +7,10 @@ public class Hotel {
     //Variables
 
     public String location;
-    public ArrayList<String> amenities = new ArrayList<String>();
+    public ArrayList<String> amenities = new ArrayList<>();
     private int numEmployees;
-    public ArrayList<Floor> floors = new ArrayList<Floor>();
-    public ArrayList<Room> rooms = new ArrayList<Room>();
+    public ArrayList<Floor> floors = new ArrayList<>();
+    public ArrayList<Room> rooms = new ArrayList<>();
 
     //Constructors
 
@@ -46,7 +46,7 @@ public class Hotel {
     }
 
 
-    //Methods for amenities, since its an ArrayList this can be appended to or modified even more
+    //Methods for amenities, since it's an ArrayList this can be appended to or modified even more
 
     public void addAmenity(String amenity) {
         this.amenities.add(amenity);
@@ -111,7 +111,7 @@ public class Hotel {
         this.rooms.add(room); //should we make a conditional where we cannot add more rooms than what is available on the floor
     }
 
-    // didnt add the delete room list till we decide what we want to do with deleting floors
+    // didn't add the delete room list till we decide what we want to do with deleting floors
     public ArrayList<Room> getRoomList() {
         return this.rooms;
     }

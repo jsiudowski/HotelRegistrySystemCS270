@@ -7,7 +7,7 @@ public class Room {
     public Hotel hotelId;
     public Floor floorId;
     
-    //construcor 
+    //constructor
     public Room (Hotel hotel, Floor floor, int roomNumber, String roomType) {
         this.hotelId = hotel;
         this.floorId = floor;
