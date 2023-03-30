@@ -25,5 +25,8 @@ Went through all the classes and edited some minute warnings the compiler provid
 **Note: There is one major error in Employee.java on line 16.**  
 For the time being, I've commented out the line
 
-###
+### _Finishing folder structure_
+
+Added repository and controller to fit our structure into an actual MVC pattern.  
+Now I'm going to go and actually do some more research on Spring framework and MVC patterns.  
 
