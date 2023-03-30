@@ -6,7 +6,7 @@ body {
   
   /* Header styles */
   header {
-    background-color: #fff;
+    background-color: #fbfbfb;
     padding: 20px;
     text-align: center;
   }
@@ -133,7 +133,7 @@ body {
   }
   
   button:hover {
-    background-color: #888;
+    background-color: #d82727;
   }
   
   /* Footer styles */
