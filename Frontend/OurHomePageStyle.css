@@ -7,10 +7,10 @@ body {
   /* Header styles */
   header {
 <<<<<<< HEAD
-    background-color: #4e4ef3;
 =======
     background-color: #e90505;
 >>>>>>> 21fe11faa34ccd2c4b55d869c0b67bc6ee9d10a0
+
     padding: 20px;
     text-align: center;
   }
