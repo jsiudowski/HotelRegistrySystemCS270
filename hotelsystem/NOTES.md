@@ -41,4 +41,5 @@ Then I'm going to add @Id and @GeneratedValue using JPA.
 
 To-Do:  
 Floor, Hotel, Payment, Reservation, Room  
-Read JPA annotation for foreign keys and data relations
+Read JPA annotation for foreign keys and data relations  
+Need a login model to bind usernames and passwords to persons
