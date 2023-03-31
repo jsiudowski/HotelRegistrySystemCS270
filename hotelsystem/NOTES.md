@@ -42,4 +42,10 @@ Then I'm going to add @Id and @GeneratedValue using JPA.
 To-Do:  
 Floor, Hotel, Payment, Reservation, Room  
 Read JPA annotation for foreign keys and data relations  
-Need a login model to bind usernames and passwords to persons
+Need a login model to bind usernames and passwords to persons  
+
+### _Day 2_
+Adding annotations to the classes is going to take some experimentation. I might start small and expand from there
+rather than try doing it all at once. @MappedSuperclass defines a class as not needing its own table  
+
+More research needs to be done on the Repository pattern. 

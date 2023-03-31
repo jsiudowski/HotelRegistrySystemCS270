@@ -1,8 +1,8 @@
 package Hotel.Registry.System.hotelsystem.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.MappedSuperclass;
 
-@Entity
+@MappedSuperclass
 public abstract class Person {
 
     public String name;
