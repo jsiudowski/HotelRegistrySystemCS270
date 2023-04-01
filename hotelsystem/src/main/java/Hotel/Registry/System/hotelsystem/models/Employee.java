@@ -3,12 +3,16 @@ package Hotel.Registry.System.hotelsystem.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Employee extends Person {
 
-    //public Boolean employee;
+    //Primary key:
     public @Id @GeneratedValue int employeeId;
+
+    //Foreign Key
+    public @ManyToOne Hotel hotel;
 
     public String position;
     private String ssn;
@@ -21,8 +25,8 @@ public class Employee extends Person {
         //The compiler doesn't like this^
     }
 
-    public Employee(String position, String Ssn) { //Deleted employee boolean because the compiler didn't like it
-        //this.employee = true;
+    public Employee(Hotel hotel,  String position, String Ssn) {
+        this.hotel = hotel;
         this.position = position;
         this.ssn = Ssn;
     }

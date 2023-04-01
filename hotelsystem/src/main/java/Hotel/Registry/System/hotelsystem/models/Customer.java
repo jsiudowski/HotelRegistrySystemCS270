@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Customer extends Person{
+    //Primary key
     public @Id @GeneratedValue int customerId;
     //Check dev notes, editing classes, for annotation meanings
     public String customerName;
@@ -25,8 +26,8 @@ public class Customer extends Person{
         this.customerId = customerId;
     }
 
-    public int getCustomerID(Customer customer) {
-        return customer.customerId;
+    public int getCustomerID() {
+        return this.customerId;
     }
 
     public void setCustomerID(Customer customer, int newCustomerID) {

@@ -3,18 +3,19 @@ package Hotel.Registry.System.hotelsystem.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Floor {
     
     //Variables
     public @Id @GeneratedValue int floorId;
-    public Hotel hotelId;
+    public @ManyToOne Hotel hotel;
 
     //Constructor
     public Floor(Hotel hotel) {
-        this.hotelId = hotel;
-        hotel.addFloor(this);
+        this.hotel = hotel;
+        //hotel.addFloor(this);
     }
 
     //Methods
@@ -27,7 +28,7 @@ public class Floor {
     }
 
     public Hotel getFloorHotel() {
-        return this.hotelId;
+        return this.hotel;
     }
 
 }

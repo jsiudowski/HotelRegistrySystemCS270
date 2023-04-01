@@ -3,17 +3,15 @@ package Hotel.Registry.System.hotelsystem.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Room {
     //variables
     public @Id @GeneratedValue int roomNumber;
     public String roomType;
-
-    //hotelId and floorId can be handled as foreign keys.
-    //This is something that may have to be accounted for later on
-    public Hotel hotelId;
-    public Floor floorId;
+    public @ManyToOne Hotel hotelId;
+    public @ManyToOne Floor floorId;
     
     //constructor
     public Room (Hotel hotel, Floor floor, int roomNumber, String roomType) {

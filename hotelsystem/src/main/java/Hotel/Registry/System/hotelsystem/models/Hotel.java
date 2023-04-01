@@ -16,8 +16,8 @@ public class Hotel {
     public String location;
     public ArrayList<String> amenities = new ArrayList<>();
     private int numEmployees;
-    public ArrayList<Floor> floors = new ArrayList<>();
-    public ArrayList<Room> rooms = new ArrayList<>();
+    //public ArrayList<Floor> floors = new ArrayList<>();
+    //public ArrayList<Room> rooms = new ArrayList<>();
 
     //Constructors
 
@@ -40,17 +40,20 @@ public class Hotel {
 
     //Setters and Getters
 
-    public int getHotelId(Hotel hotel) {
-        return hotel.hotelId;
+    public int getHotelId() {
+        return this.hotelId;
     }
 
-    public void setHotelId(Hotel hotel, int hotelId) {
-        hotel.hotelId = hotelId;
+    public void setHotelId(int hotelId) {
+        this.hotelId = hotelId;
     }
 
+    /*
     public int getRoomAmount() {
         return rooms.size();
     }
+    */
+    //Commenting out for debugging
 
     public void setLocation(String loc) {
         this.location = loc;
@@ -96,7 +99,7 @@ public class Hotel {
     }
 
     //Methods for Floors
-
+    /*
     public void addFloor(Floor floor) {
         this.floors.add(floor);
     }
@@ -134,6 +137,8 @@ public class Hotel {
     public Room getRoomByIndex (int index) {
         return this.rooms.get(index);
     }
+
+     */
 
 
 

@@ -3,13 +3,13 @@ package Hotel.Registry.System.hotelsystem.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
-import java.util.Scanner;
 
 @Entity
 public class Payment {
 
-    public Customer customer;
+    public @ManyToOne Customer customer;
     public @Id @GeneratedValue int paymentId;
     public int inputPayment;
     public boolean isCash;
@@ -19,8 +19,6 @@ public class Payment {
     private String cardSecurityCode;
     private String zipCode;
     private String billingAddress;
-
-    Scanner scanner = new Scanner(System.in);
 
     public Payment(Customer customer, String cardHolder, String cardNumber, String cardSecurityCode, String cardExpiration, String zipCode, String billingAddress){
         this.customer = customer;
@@ -50,50 +48,45 @@ public class Payment {
         this.customer = customer;
     }
 
-    public void setCardHolder(){
-        System.out.print("Enter Card Holder Name");
-        cardHolder = scanner.nextLine();
+    public void setCardHolder(String cardHolder){
+        this.cardHolder = cardHolder;
     }
     public String getCardHolder(Payment payment){
         return payment.cardHolder;
     }
 
-    public void setCardNumber(){
-        System.out.print("Enter card number");
-        cardNumber = scanner.nextLine();
+    public void setCardNumber(String cardNum){
+        this.cardNumber = cardNum;
+
     }
 
     public String getCardNumber(Payment payment){
         return payment.cardNumber;
     }
-    public void setSecurityCode(){
-        System.out.print("Enter security code");
-        cardSecurityCode = scanner.nextLine();
+    public void setSecurityCode(String secutiryCode){
+        this.cardSecurityCode = secutiryCode;
     }
 
     public String getSecurityCode(Payment payment){
         return payment.cardSecurityCode;
     }
-    public void setCardExpiration(){
-        System.out.print("Enter card expiration date");
-        cardExpiration = scanner.nextLine();
+    public void setCardExpiration(String cardExp){
+        this.cardExpiration = cardExp;
     }
 
     public String getCardExpiration(Payment payment){
         return payment.cardExpiration;
     }
-    public void setZipCode(){
-        System.out.print("Enter zip code");
-        zipCode = scanner.nextLine();
+    public void setZipCode(String zip){
+        this.zipCode = zip;
     }
 
     public String getZipCode(Payment payment){
         return payment.zipCode;
 
     }
-    public void setBillingAddress(){
-        System.out.print("Enter billing Address");
-        billingAddress = scanner.nextLine();
+    public void setBillingAddress(String billingAdd){
+        this.billingAddress = billingAdd;
     }
 
     public String getBillingAddress(Payment payment){
