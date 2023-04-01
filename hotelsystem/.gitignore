@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### DB Password and User ###
+application.properties

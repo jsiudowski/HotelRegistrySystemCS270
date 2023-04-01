@@ -1,4 +1,4 @@
-package Hotel.Registry.System.hotelsystem.model;
+package Hotel.Registry.System.hotelsystem.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +21,7 @@ public class Employee extends Person{
         //The compiler doesn't like this^
     }
 
-    public Employee(Boolean employee, String position, String Ssn) {
+    public Employee(String position, String Ssn) { //Deleted employee boolean because the compiler didn't like it
         //this.employee = true;
         this.position = position;
         this.Ssn = Ssn;

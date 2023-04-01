@@ -1,4 +1,4 @@
-package Hotel.Registry.System.hotelsystem.model;
+package Hotel.Registry.System.hotelsystem.models;
 
 public class Room {
     //variables

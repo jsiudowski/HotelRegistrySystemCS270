@@ -48,4 +48,20 @@ Need a login model to bind usernames and passwords to persons
 Adding annotations to the classes is going to take some experimentation. I might start small and expand from there
 rather than try doing it all at once. @MappedSuperclass defines a class as not needing its own table  
 
-More research needs to be done on the Repository pattern. 
+More research needs to be done on the Repository pattern.
+
+Considering whether Employee should have an "isAdmin" variable.  
+
+### _Repository_
+I'm starting out by just creating an interface for the employee.java file. I want to start out small and expand from there.
+Using the interfaces within the repository we can communicate with the mySQL database.  
+Following the tutorial, we're going to add some configurations to the application.properties file.  
+
+**Note: the tutorial asks that "spring.jpa.hibernate.ddl-auto=update" is added to the properties file. For the time being, this means that dummy data will need to be manually deleted.**    
+
+Spring.io recommends using Long variable types for IDs, I'm leaving it as int for the time being.  
+
+### _Database_
+I've downloaded mySQL and created a database. We just have to see if it will connect nicely now.  
+To access the db, username=root. Password is in the discord, or the application properties file.  
+***The application.properties file will be added to the .gitignore file***
