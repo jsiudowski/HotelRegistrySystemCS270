@@ -66,3 +66,8 @@ I've downloaded mySQL and created a database. We just have to see if it will con
 To access the db, username=root. Password is in the discord, or the application properties file.  
 I tried including application.properties to .gitignore, but I'm incompetent.  
 Trying to compile doesn't work, it provides the error that the Employee class doesn't share the same name as the file??  
+
+I've added entity tags to every single java class. Every entity needs to declare or inherit an @Id property.
+I'm adding Ids that can be changed in the future, I just need them to at least have Spring boot properly. The app compiles
+but it errors out because of this. Room.java needs some form of foreign key declaration.
+

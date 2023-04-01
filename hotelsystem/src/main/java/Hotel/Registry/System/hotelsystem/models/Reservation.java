@@ -1,9 +1,14 @@
 package Hotel.Registry.System.hotelsystem.models;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.util.*;
 import java.util.Date;
 
+@Entity
 public class Reservation {
-    public int reservationID;
+    public @Id @GeneratedValue int reservationID;
     public Customer customer;
     public Date startDate;
     public Date endDate;
@@ -16,9 +21,8 @@ public class Reservation {
         this.reservationID = rand.nextInt();
     }
 
-    public Reservation(int reservationID, Customer customer, Date start, 
+    public Reservation(Customer customer, Date start,
         Date end, Room room, boolean isCheckedIn, int numGuests) {
-            this.reservationID = reservationID;
             this.customer = customer;
             this.startDate = start;
             this.endDate = end;

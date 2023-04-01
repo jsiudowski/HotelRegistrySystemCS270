@@ -1,11 +1,17 @@
 package Hotel.Registry.System.hotelsystem.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.util.ArrayList;
 
+@Entity
 public class Hotel {
 
     //Variables
 
+    public @Id @GeneratedValue int hotelId;
     public String location;
     public ArrayList<String> amenities = new ArrayList<>();
     private int numEmployees;
@@ -32,6 +38,14 @@ public class Hotel {
     }
 
     //Setters and Getters
+
+    public int getHotelId(Hotel hotel) {
+        return hotel.hotelId;
+    }
+
+    public void setHotelId(Hotel hotel, int hotelId) {
+        hotel.hotelId = hotelId;
+    }
 
     public int getRoomAmount() {
         return rooms.size();

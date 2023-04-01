@@ -1,8 +1,17 @@
 package Hotel.Registry.System.hotelsystem.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.util.Scanner;
 
+@Entity
 public class Payment {
+
+    public Customer customer;
+
+    public @Id @GeneratedValue int paymentId;
     public int inputPayment;
     public boolean isCash;
     public  String cardHolder;
@@ -14,7 +23,8 @@ public class Payment {
 
     Scanner scanner = new Scanner(System.in);
 
-    public Payment(String cardHolder, String cardNumber, String cardSecurityCode, String cardExpiration, String zipCode, String billingAddress){
+    public Payment(Customer customer, String cardHolder, String cardNumber, String cardSecurityCode, String cardExpiration, String zipCode, String billingAddress){
+        this.customer = customer;
         this.cardHolder = cardHolder;
         this.cardNumber = cardNumber;
         this.cardSecurityCode = cardSecurityCode;
@@ -23,6 +33,22 @@ public class Payment {
         this.billingAddress = billingAddress;
 
 
+    }
+
+    public int getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public void setCardHolder(){

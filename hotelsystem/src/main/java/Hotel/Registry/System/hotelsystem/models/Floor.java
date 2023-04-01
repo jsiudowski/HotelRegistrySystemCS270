@@ -12,9 +12,8 @@ public class Floor {
     public Hotel hotelId;
 
     //Constructor
-    public Floor(Hotel hotel, int num) {
+    public Floor(Hotel hotel) {
         this.hotelId = hotel;
-        this.floorId = num;
         hotel.addFloor(this);
     }
 
