@@ -64,4 +64,5 @@ Spring.io recommends using Long variable types for IDs, I'm leaving it as int fo
 ### _Database_
 I've downloaded mySQL and created a database. We just have to see if it will connect nicely now.  
 To access the db, username=root. Password is in the discord, or the application properties file.  
-***The application.properties file will be added to the .gitignore file***
+I tried including application.properties to .gitignore, but I'm incompetent.  
+Trying to compile doesn't work, it provides the error that the Employee class doesn't share the same name as the file??  

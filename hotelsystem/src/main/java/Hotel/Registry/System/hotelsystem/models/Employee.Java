@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Employee extends Person{
+public class Employee extends Person {
 
 
     //public Boolean employee;
