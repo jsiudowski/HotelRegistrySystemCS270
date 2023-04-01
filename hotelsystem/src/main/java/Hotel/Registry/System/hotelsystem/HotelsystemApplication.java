@@ -9,8 +9,6 @@ public class HotelsystemApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HotelsystemApplication.class, args);
 
-		System.out.println("System is online!");
-
 	}
 
 
