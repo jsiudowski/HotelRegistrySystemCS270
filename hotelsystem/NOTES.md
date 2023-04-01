@@ -39,10 +39,10 @@ Then I'm going to add @Id and @GeneratedValue using JPA.
 
 **Note: Any class with an ID is being edited to conform to this. All Ids will be int**  
 
-To-Do:  
-Floor, Hotel, Payment, Reservation, Room  
-Read JPA annotation for foreign keys and data relations  
-Need a login model to bind usernames and passwords to persons  
+To-Do for today:  
+-Floor, Hotel, Payment, Reservation, Room  
+-Read JPA annotation for foreign keys and data relations  
+-Need a login model to bind usernames and passwords to persons ***Important***  
 
 ### _Day 2_
 Adding annotations to the classes is going to take some experimentation. I might start small and expand from there
@@ -71,3 +71,10 @@ I've added entity tags to every single java class. Every entity needs to declare
 I'm adding Ids that can be changed in the future, I just need them to at least have Spring boot properly. The app compiles
 but it errors out because of this. Room.java needs some form of foreign key declaration.
 
+### _End of day debrief_
+Everything needs to be reordered to conform to a functioning entity relationship framework.
+I uploaded a new diagram to follow on Lucidchart. Once all the entity relationships are established then we can finally
+get Spring to function (thinking optimistically). Useful links:
+https://www.digitalocean.com/community/tutorials/jpa-hibernate-annotations
+https://www.youtube.com/watch?v=4LZKnegAm4g
+https://youtu.be/x6C20zhZHw8
