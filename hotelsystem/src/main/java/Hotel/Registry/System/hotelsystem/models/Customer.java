@@ -6,30 +6,30 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Customer extends Person{
-    public @Id @GeneratedValue int customerID;
+    public @Id @GeneratedValue int customerId;
     //Check dev notes, editing classes, for annotation meanings
     public String customerName;
     public int customerAge;
 
     public Customer() {
         super();
-        customerID = 0;
+        customerId = 0;
     }
 
-    public Customer(int customerID) {
-        this.customerID = customerID;
+    public Customer(int customerId) {
+        this.customerId = customerId;
     }
 
-    public Customer(int customerID, String name, int age, String address, boolean isEmployee) {
+    public Customer(int customerId, String name, int age, String address, boolean isEmployee) {
         super(name, age, address, isEmployee);
-        this.customerID = customerID;
+        this.customerId = customerId;
     }
 
     public int getCustomerID(Customer customer) {
-        return customer.customerID;
+        return customer.customerId;
     }
 
     public void setCustomerID(Customer customer, int newCustomerID) {
-        customer.customerID = newCustomerID;
+        customer.customerId = newCustomerID;
     }
 }

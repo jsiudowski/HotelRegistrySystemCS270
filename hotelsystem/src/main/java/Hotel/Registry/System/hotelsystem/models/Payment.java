@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Payment {
 
     public Customer customer;
-
     public @Id @GeneratedValue int paymentId;
     public int inputPayment;
     public boolean isCash;

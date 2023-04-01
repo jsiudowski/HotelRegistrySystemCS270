@@ -7,16 +7,16 @@ import jakarta.persistence.Id;
 @Entity
 public class Employee extends Person {
 
-
     //public Boolean employee;
-    public String position;
-    private String Ssn;
     public @Id @GeneratedValue int employeeId;
+
+    public String position;
+    private String ssn;
 
     protected Employee()
     {
         position = "";
-        Ssn = "";
+        ssn = "";
         //Person.employee = true;
         //The compiler doesn't like this^
     }
@@ -24,7 +24,7 @@ public class Employee extends Person {
     public Employee(String position, String Ssn) { //Deleted employee boolean because the compiler didn't like it
         //this.employee = true;
         this.position = position;
-        this.Ssn = Ssn;
+        this.ssn = Ssn;
     }
 
     // employee Name 
@@ -41,12 +41,12 @@ public class Employee extends Person {
     // employee Ssn 
     private void setEmployeeSSN(Employee Employee, String Ssn)
     {
-        Employee.Ssn = Ssn;
+        Employee.ssn = Ssn;
     }
 
     private String getEmployeeSSN(Employee Employee)
     {
-        return Employee.Ssn;
+        return Employee.ssn;
     }
 
     // employee ID 

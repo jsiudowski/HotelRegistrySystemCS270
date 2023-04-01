@@ -1,8 +1,10 @@
 package Hotel.Registry.System.hotelsystem.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import org.hibernate.annotations.Columns;
 
 import java.util.ArrayList;
 
@@ -10,7 +12,6 @@ import java.util.ArrayList;
 public class Hotel {
 
     //Variables
-
     public @Id @GeneratedValue int hotelId;
     public String location;
     public ArrayList<String> amenities = new ArrayList<>();

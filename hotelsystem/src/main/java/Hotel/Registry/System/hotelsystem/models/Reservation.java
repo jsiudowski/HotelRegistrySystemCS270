@@ -2,13 +2,15 @@ package Hotel.Registry.System.hotelsystem.models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 import java.util.*;
 import java.util.Date;
 
 @Entity
 public class Reservation {
-    public @Id @GeneratedValue int reservationID;
+    public @Id @GeneratedValue int reservationId;
+
     public Customer customer;
     public Date startDate;
     public Date endDate;
@@ -16,9 +18,8 @@ public class Reservation {
     public boolean isCheckedIn;
     public int numGuests;
 
-    public Reservation() {
-        Random rand = new Random();
-        this.reservationID = rand.nextInt();
+    protected Reservation() {
+
     }
 
     public Reservation(Customer customer, Date start,
@@ -31,12 +32,12 @@ public class Reservation {
             this.numGuests = numGuests;
     }
 
-    public void setReservationID(Reservation reservation) {
-        reservation.reservationID = reservationID;
+    public void setReservationId(Reservation reservation) {
+        reservation.reservationId = reservationId;
     }
 
     public int getReservationID(Reservation reservation) {
-        return reservation.reservationID;
+        return reservation.reservationId;
     }
 
     public void setCustomer(Reservation reservation, Customer customer) {
