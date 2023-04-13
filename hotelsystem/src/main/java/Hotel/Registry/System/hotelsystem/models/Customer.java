@@ -2,12 +2,13 @@ package Hotel.Registry.System.hotelsystem.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Customer extends Person{
     //Primary key
-    public @Id @GeneratedValue int customerId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int customerId;
     //Check dev notes, editing classes, for annotation meanings
     public String customerName;
     public int customerAge;

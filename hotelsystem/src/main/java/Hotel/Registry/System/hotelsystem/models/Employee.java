@@ -1,15 +1,12 @@
 package Hotel.Registry.System.hotelsystem.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Employee extends Person {
 
     //Primary key:
-    public @Id @GeneratedValue int employeeId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int employeeId;
 
     //Foreign Key
     public @ManyToOne Hotel hotel;

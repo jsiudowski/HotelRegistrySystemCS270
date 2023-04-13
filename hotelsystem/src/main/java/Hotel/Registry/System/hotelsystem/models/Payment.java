@@ -1,16 +1,13 @@
 package Hotel.Registry.System.hotelsystem.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 
 @Entity
 public class Payment {
 
     public @ManyToOne Customer customer;
-    public @Id @GeneratedValue int paymentId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int paymentId;
     public int inputPayment;
     public boolean isCash;
     public  String cardHolder;

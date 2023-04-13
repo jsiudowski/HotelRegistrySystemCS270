@@ -8,7 +8,7 @@ import java.util.Date;
 public class Reservation {
 
     //Primary key:
-    public @Id @GeneratedValue int reservationId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int reservationId;
 
     //Foreign keys:
     public @ManyToOne Customer customer;
