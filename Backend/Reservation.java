@@ -11,7 +11,7 @@ public class Reservation {
     public boolean isCheckedIn;
     public int numGuests;
 
-    private Reservation() {
+    public Reservation() {
         Random rand = new Random();
         this.reservationID = rand.nextInt();
     }

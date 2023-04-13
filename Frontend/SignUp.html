@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="OurHomePagestyle.css">
+
+    <a href="OurHomePage.html">
+        <h4>Back To Home</h4>
+        <link rel="stylesheet">
+    </a>
+    <script>
+      function validateForm() {
+        var email = document.forms["signup"]["email"].value;
+        var username = document.forms["signup"]["username"].value;
+        var password = document.forms["signup"]["password"].value;
+        var accountType = document.querySelector('input[name="account-type"]:checked');
+        
+        if (email == "") {
+          alert("Email must be filled out");
+          return false;
+        }
+        if (username == "") {
+          alert("Username must be filled out");
+          return false;
+        }
+        if (password == "") {
+          alert("Password must be filled out");
+          return false;
+        }
+        if (!accountType) {
+          alert("Please select an account type");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Sign Up</h1>
+    </header>
+    
+    <main>
+      <form name="signup" action="" onsubmit="return validateForm()" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label>
+          <input type="radio" name="account-type" value="customer">
+          Customer
+        </label>
+        
+        <label>
+          <input type="radio" name="account-type" value="employee">
+          Employee
+        </label>
+        
+        <label>
+          <input type="radio" name="account-type" value="owner">
+          Owner
+        </label>
+        
+        <button type="submit">Sign Up</button>
+      </form>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 Infinite Room, Inc.</p>
+    </footer>
+  </body>
+</html>
