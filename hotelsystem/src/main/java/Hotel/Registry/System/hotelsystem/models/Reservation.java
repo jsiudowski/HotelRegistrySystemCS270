@@ -1,40 +1,47 @@
-package Backend;
 package Hotel.Registry.System.hotelsystem.models;
 import jakarta.persistence.*;
+
 import java.util.*;
 import java.util.Date;
 
+@Entity
 public class Reservation {
-    public int reservationID;
-    public Customer customer;
+
+    //Primary key:
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int reservationId;
+
+    //Foreign keys:
+    public @ManyToOne Customer customer;
+    public @ManyToOne Hotel hotel;
+    //I'm choosing to do a One-to-One relationship for rooms for now. Each reservation can ONLY have one room
+    public @OneToOne Room room;
+
     public Date startDate;
     public Date endDate;
-    public Room room;
     public boolean isCheckedIn;
     public int numGuests;
 
-    private Reservation() {
-        Random rand = new Random();
-        this.reservationID = rand.nextInt();
+    protected Reservation() {
+
     }
 
-    public Reservation(int reservationID, Customer customer, Date start, 
-        Date end, Room room, boolean isCheckedIn, int numGuests) {
-            this.reservationID = reservationID;
+    public Reservation(Customer customer, Date start,
+        Date end,Hotel hotel, Room room, boolean isCheckedIn, int numGuests) {
             this.customer = customer;
             this.startDate = start;
             this.endDate = end;
+            this.hotel = hotel;
             this.room = room;
             this.isCheckedIn = isCheckedIn;
             this.numGuests = numGuests;
     }
 
-    public void setReservationID(Reservation reservation) {
-        reservation.reservationID = reservationID;
+    public void setReservationId(Reservation reservation) {
+        reservation.reservationId = reservationId;
     }
 
     public int getReservationID(Reservation reservation) {
-        return reservation.reservationID;
+        return reservation.reservationId;
     }
 
     public void setCustomer(Reservation reservation, Customer customer) {
