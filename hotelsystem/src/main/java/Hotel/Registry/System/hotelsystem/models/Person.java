@@ -1,5 +1,8 @@
-package Backend;
+package Hotel.Registry.System.hotelsystem.models;
 
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Person {
 
     public String name;

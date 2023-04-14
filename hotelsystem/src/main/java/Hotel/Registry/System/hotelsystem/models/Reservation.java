@@ -1,4 +1,6 @@
 package Backend;
+package Hotel.Registry.System.hotelsystem.models;
+import jakarta.persistence.*;
 import java.util.*;
 import java.util.Date;
 
@@ -11,7 +13,7 @@ public class Reservation {
     public boolean isCheckedIn;
     public int numGuests;
 
-    public Reservation() {
+    private Reservation() {
         Random rand = new Random();
         this.reservationID = rand.nextInt();
     }
