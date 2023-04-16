@@ -12,13 +12,13 @@ export default function Register() {
         name:"",
         age:"",
         address:"",
-        username:"",
+        userName:"",
         password:"",
         status:""
     })
     
     //Sets input values to user information at registration, check value attribute in inputs
-    const{name,age,address,username,password,status}=user;
+    const{name,age,address,userName,password,status}=user;
 
     //Function that inputs the user data into the json object when the inputs are updates
     const onInputChange=(e)=>{
@@ -59,7 +59,7 @@ export default function Register() {
                         <label htmlFor="Username" className="form-label" >
                             Username
                         </label>
-                        <input type={"text"} className="form-control" name="username" placeholder="Enter Username" value={username} onChange={(e)=>onInputChange(e)}></input>
+                        <input type={"text"} className="form-control" name="userName" placeholder="Enter Username" value={userName} onChange={(e)=>onInputChange(e)}></input>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="Password" className="form-label">
