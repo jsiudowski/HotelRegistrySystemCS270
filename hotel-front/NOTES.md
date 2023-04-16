@@ -8,3 +8,5 @@ Using npm i bootstrap in the terminal downloaded the bootstrap front end framewo
 Moving on to using Axios in order to GET table information.  
 Using a temporary table in Home.js to test information getting.  
 Added react router dom via npm i react-router-dom.  
+Users can now be added to the database from the Registration webpage.  
+The primary way this is done is through axiom CRUD operations.  
