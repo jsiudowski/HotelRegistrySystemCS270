@@ -8,29 +8,27 @@ import jakarta.persistence.Id;
 @Entity
 public class Customer extends Person{
     //Primary key
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long customerId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long id;
     //Check dev notes, editing classes, for annotation meanings
-    public String customerName;
-    public int customerAge;
 
     public Customer() {
         super();
     }
 
     public Customer(Long customerId) {
-        this.customerId = customerId;
+        this.id = customerId;
     }
 
     public Customer(Long customerId, String name, int age, String address, boolean isEmployee) {
         super(name, age, address, isEmployee);
-        this.customerId = customerId;
+        this.id = customerId;
     }
 
     public Long getCustomerID() {
-        return this.customerId;
+        return this.id;
     }
 
-    public void setCustomerID(Customer customer, Long newCustomerID) {
-        customer.customerId = newCustomerID;
+    public void setCustomerID(Long newCustomerID) {
+        this.id = newCustomerID;
     }
 }
