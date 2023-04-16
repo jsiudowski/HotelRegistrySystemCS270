@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 export default function LoginForm() {
   return (
@@ -10,7 +12,7 @@ export default function LoginForm() {
                     <label htmlFor="Name" className="form-label">
                         Username
                     </label>
-                    <input type={"text"} className="form-control" placeholder="John Doe" name="Username"></input>
+                    <input type={"text"} className="form-control" name="Username"></input>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="Password" className="form-label">
@@ -19,6 +21,12 @@ export default function LoginForm() {
                     <input type={"password"} className="form-control" name="Password"></input>
                 </div>
             </div>    
+        </div>
+        <div className="btn">
+            <label htmlFor="Register" className="form-label p-2">
+                Don't have an account?
+            </label>
+            <Link className="btn btn-outline-dark" to="/register" >Register</Link>
         </div>        
     </div>
   )
