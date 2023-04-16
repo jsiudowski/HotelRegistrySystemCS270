@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
+
+  const [customers,setCustomers]=useState([]);
+
+  useEffect(()=> {
+    loadCustomers();
+  }, []);
+
+  const loadCustomers=async()=>{
+    const result=await axios.get("http://localhost:8080/customers");
+    setCustomers(result.data);
+  }
+
+
   return (
     <div className='container'>
         <div className='py-4'>
@@ -8,29 +22,22 @@ export default function Home() {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Address</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            {
+              customers.map((customer,index)=>(
+                <tr>
+                <th scope="row" key={index}>{index+1}</th>
+                <td>{customer.name}</td>
+                <td>{customer.age}</td>
+                <td>{customer.address}</td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
         </div>
