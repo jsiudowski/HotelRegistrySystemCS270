@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Hotel {
 
     //Variables
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int hotelId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long hotelId;
     public String location;
     public ArrayList<String> amenities = new ArrayList<>();
     private int numEmployees;
@@ -37,11 +37,11 @@ public class Hotel {
 
     //Setters and Getters
 
-    public int getHotelId() {
+    public Long getHotelId() {
         return this.hotelId;
     }
 
-    public void setHotelId(int hotelId) {
+    public void setHotelId(Long hotelId) {
         this.hotelId = hotelId;
     }
 

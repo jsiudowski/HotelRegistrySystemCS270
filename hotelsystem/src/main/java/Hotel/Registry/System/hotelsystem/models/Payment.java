@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Payment {
 
     public @ManyToOne Customer customer;
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int paymentId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long paymentId;
     public int inputPayment;
     public boolean isCash;
     public  String cardHolder;
@@ -29,11 +29,11 @@ public class Payment {
 
     }
 
-    public int getPaymentId() {
+    public Long getPaymentId() {
         return paymentId;
     }
 
-    public void setPaymentId(int paymentId) {
+    public void setPaymentId(Long paymentId) {
         this.paymentId = paymentId;
     }
 

@@ -96,4 +96,8 @@ The application was able to compile and execute. Here are the only concerns curr
 3. Scanner cannot be used in the models. It doesn't fit the pattern and will cause the app to crash.
 4. After troubleshooting, code is a little messy. It needs to be tidied up and properly labeled. Contact me if you're looking to do this.
 
-Other than that, I'm just happy it compiled and ran. Deo gratias.  
+Other than that, I'm just happy it compiled and ran. Deo gratias.
+
+### _Continuing the Project_
+Continuing on, we're creating the repositories for each model. The JPA Repository class allows us to use basic CRUD operations.  
+I've changed all IDs to Long types as JPA

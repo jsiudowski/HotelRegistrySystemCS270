@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Employee extends Person {
 
     //Primary key:
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int employeeId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long employeeId;
 
     //Foreign Key
     public @ManyToOne Hotel hotel;
@@ -51,11 +51,11 @@ public class Employee extends Person {
     }
 
     // employee ID 
-    public void setEmployeeID(Employee Employee, int employeeId) {
+    public void setEmployeeID(Employee Employee, Long employeeId) {
         Employee.employeeId = employeeId;
     }
 
-    public int getEmployeeID(Employee Employee) {
+    public Long getEmployeeID(Employee Employee) {
         return Employee.employeeId;
     }
 

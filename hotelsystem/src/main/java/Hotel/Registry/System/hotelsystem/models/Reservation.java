@@ -8,7 +8,7 @@ import java.util.Date;
 public class Reservation {
 
     //Primary key:
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int reservationId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long reservationId;
 
     //Foreign keys:
     public @ManyToOne Customer customer;
@@ -36,11 +36,11 @@ public class Reservation {
             this.numGuests = numGuests;
     }
 
-    public void setReservationId(Reservation reservation) {
-        reservation.reservationId = reservationId;
+    public void setReservationId(Long id) {
+        this.reservationId = id;
     }
 
-    public int getReservationID(Reservation reservation) {
+    public Long getReservationID(Reservation reservation) {
         return reservation.reservationId;
     }
 

@@ -5,21 +5,20 @@ import jakarta.persistence.*;
 @Entity
 public class Room {
     //variables
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int roomNumber;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long roomNumber;
     public String roomType;
     public @ManyToOne Hotel hotelId;
     public @ManyToOne Floor floorId;
     
     //constructor
-    public Room (Hotel hotel, Floor floor, int roomNumber, String roomType) {
+    public Room (Hotel hotel, Floor floor, String roomType) {
         this.hotelId = hotel;
         this.floorId = floor;
-        this.roomNumber = roomNumber;
         this.roomType = roomType;
     }
 
     //methods
-    public int getRoomNum (Room room) {
+    public Long getRoomNum (Room room) {
         return room.roomNumber;
     }
 
