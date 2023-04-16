@@ -8,6 +8,8 @@ public abstract class Person {
     public String name;
     public int age;
     public String address;
+    public String userName;
+    public String password;
 
 
     public Person() {
@@ -16,12 +18,15 @@ public abstract class Person {
         address = "";
     }
 
-    public Person(String name, int age, String address) {
+    public Person(String name, int age, String address, String user, String pass) {
         this.name = name;
         this.age = age;
         this.address = address;
+        this.userName = user;
+        this.password = pass;
 
     }
+
 
     public void setName(Person person,String name) {
         person.name = name;
@@ -47,4 +52,19 @@ public abstract class Person {
         return person.age;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
