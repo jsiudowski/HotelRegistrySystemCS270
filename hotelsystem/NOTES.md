@@ -100,4 +100,5 @@ Other than that, I'm just happy it compiled and ran. Deo gratias.
 
 ### _Continuing the Project_
 Continuing on, we're creating the repositories for each model. The JPA Repository class allows us to use basic CRUD operations.  
-I've changed all IDs to Long types as JPA
+I've changed all IDs to Long types as JPA  
+Moving onto Front End
