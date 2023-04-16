@@ -7,3 +7,4 @@ Now creating a Navbar for the home page.
 Using npm i bootstrap in the terminal downloaded the bootstrap front end framework.  
 Moving on to using Axios in order to GET table information.  
 Using a temporary table in Home.js to test information getting.  
+Added react router dom via npm i react-router-dom.  
