@@ -11,18 +11,14 @@ public class Customer extends Person{
     public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long id;
     //Check dev notes, editing classes, for annotation meanings
 
-    public Customer() {
-        super();
-    }
-
-    public Customer(Long customerId) {
-        this.id = customerId;
-    }
+    /*
+    //Testing using the default constructor as a fix for POSTMapping
 
     public Customer(Long customerId, String name, int age, String address, boolean isEmployee) {
         super(name, age, address, isEmployee);
         this.id = customerId;
     }
+    */
 
     public Long getCustomerID() {
         return this.id;

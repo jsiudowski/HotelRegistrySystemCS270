@@ -8,21 +8,17 @@ public abstract class Person {
     public String name;
     public int age;
     public String address;
-    public boolean employee;
-
     public Person() {
         name = "";
         age = 0;
         address = "";
-        employee = false;
     }
 
-    public Person(String name, int age, String address, boolean employee) {
+    public Person(String name, int age, String address) {
         this.name = name;
         this.age = age;
         this.address = address;
-        this.employee = employee;
-        
+
     }
 
     public void setName(Person person,String name) {
@@ -49,11 +45,4 @@ public abstract class Person {
         return person.age;
     }
 
-    public void setEmployee(Person person, boolean employeeStatus) {
-        person.employee = employeeStatus;
-    }
-
-    public boolean getEmployee(Person person) {
-        return person.employee;
-    }
 }
