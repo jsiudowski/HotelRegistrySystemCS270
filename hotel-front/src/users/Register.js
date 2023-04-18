@@ -7,7 +7,7 @@ export default function Register() {
     let navigate=useNavigate();
 
 
-    //Object for users
+    //Object for users and useState React Hooks
     const [user, setUser]=useState({
         name:"",
         age:"",
@@ -25,6 +25,7 @@ export default function Register() {
         setUser({...user,[e.target.name]:e.target.value});
     }
 
+    //Need to add a if check on status to create employee object. To implement owner, add isAdmin property to employee.java
     const onSubmit= async (e)=>{
         e.preventDefault();
         await axios.post("http://localhost:8080/customer", user);
