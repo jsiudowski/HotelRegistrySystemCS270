@@ -14,7 +14,7 @@ export default function Register() {
         address:"",
         userName:"",
         password:"",
-        status:""
+        status:"",
     })
     
     //Sets input values to user information at registration, check value attribute in inputs
@@ -23,13 +23,28 @@ export default function Register() {
     //Function that inputs the user data into the json object when the inputs are updates
     const onInputChange=(e)=>{
         setUser({...user,[e.target.name]:e.target.value});
+        if (status === "Owner") {
+            setUser(user => [
+                ...user,
+                {position:"Owner"},
+                {isAdmin:"True"},
+            ]);
+        }
     }
 
     //Need to add a if check on status to create employee object. To implement owner, add isAdmin property to employee.java
     const onSubmit= async (e)=>{
         e.preventDefault();
-        await axios.post("http://localhost:8080/customer", user);
-        navigate("/");
+
+        if(status === "Customer") {
+            await axios.post("http://localhost:8080/customer", user);
+            navigate("/");
+        }
+        else if (status === "Employee" || status === "Owner") {
+            await axios.post("http://localhost:8080/employee", user);
+            navigate("/");
+        }
+        
     }
 
   return (

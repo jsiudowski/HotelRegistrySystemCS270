@@ -7,12 +7,11 @@ public class Employee extends Person {
 
     //Primary key:
     public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long employeeId;
-
     //Foreign Key
     public @ManyToOne Hotel hotel;
-
     public String position;
     private String ssn;
+    private Boolean isAdmin;
 
     protected Employee()
     {
@@ -22,10 +21,11 @@ public class Employee extends Person {
         //The compiler doesn't like this^
     }
 
-    public Employee(Hotel hotel,  String position, String Ssn) {
+    public Employee(Hotel hotel,  String position, String Ssn, Boolean admin) {
         this.hotel = hotel;
         this.position = position;
         this.ssn = Ssn;
+        this.isAdmin = admin;
     }
 
     // employee Name 
@@ -70,4 +70,11 @@ public class Employee extends Person {
         
     }
 
+    public Boolean getAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        isAdmin = admin;
+    }
 }
