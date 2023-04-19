@@ -79,6 +79,6 @@ public class Employee extends Person {
     }
 
     public void setAdmin(Boolean isAdmin) {
-        isAdmin = isAdmin;
+        this.isAdmin = isAdmin;
     }
 }
