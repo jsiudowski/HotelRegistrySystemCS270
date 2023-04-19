@@ -14,7 +14,7 @@ import java.util.List;
 public class ReservationController {
 
     @Autowired
-    private ReservationRepository employeeRepository;
+    private ReservationRepository reservationRepository;
 
     @PostMapping("/reservation")
     Reservation newReservation(@RequestBody Reservation newReservation) {

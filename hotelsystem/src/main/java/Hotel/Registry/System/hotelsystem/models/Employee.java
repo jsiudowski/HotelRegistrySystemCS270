@@ -17,6 +17,7 @@ public class Employee extends Person {
     {
         position = "";
         ssn = "";
+        isAdmin = false;
         //Person.employee = true;
         //The compiler doesn't like this^
     }

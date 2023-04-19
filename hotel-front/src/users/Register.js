@@ -40,11 +40,14 @@ export default function Register() {
             await axios.post("http://localhost:8080/customer", user);
             navigate("/");
         }
-        else if (status === "Employee" || status === "Owner") {
+        else if (status === "Employee") {
             await axios.post("http://localhost:8080/employee", user);
             navigate("/");
         }
-        
+        else if (status === "Owner") {
+            await axios.post("http://localhost:8080/owner", user);
+            navigate("/");
+        }
     }
 
   return (
