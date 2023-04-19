@@ -11,8 +11,9 @@ public class Employee extends Person {
     public @ManyToOne Hotel hotel;
     public String position;
     private String ssn;
-    private Boolean isAdmin;
+    public Boolean isAdmin;
 
+    /*
     protected Employee()
     {
         position = "";
@@ -22,12 +23,14 @@ public class Employee extends Person {
         //The compiler doesn't like this^
     }
 
+
     public Employee(Hotel hotel,  String position, String Ssn, Boolean admin) {
         this.hotel = hotel;
         this.position = position;
         this.ssn = Ssn;
         this.isAdmin = admin;
     }
+    */
 
     // employee Name 
     public void setEmployeeName(Employee Employee, String newEmployeeName)
@@ -75,7 +78,7 @@ public class Employee extends Person {
         return isAdmin;
     }
 
-    public void setAdmin(Boolean admin) {
-        isAdmin = admin;
+    public void setAdmin(Boolean isAdmin) {
+        isAdmin = isAdmin;
     }
 }
