@@ -44,12 +44,12 @@ public class Employee extends Person {
     }
     
     // employee Ssn 
-    private void setEmployeeSSN(Employee Employee, String Ssn)
+    public void setEmployeeSSN(Employee Employee, String Ssn)
     {
         Employee.ssn = Ssn;
     }
 
-    private String getEmployeeSSN(Employee Employee)
+    public String getEmployeeSSN(Employee Employee)
     {
         return Employee.ssn;
     }
