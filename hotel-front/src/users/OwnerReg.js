@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function OwnerReg() {
-<<<<<<< Updated upstream
 
     
 
@@ -12,14 +11,10 @@ export default function OwnerReg() {
             <form>
                 <div className="mb-3">
                     <label htmlFor="ssn" className="form-label">Social Security</label>
-                    <input type={"text"} className="form-control" name="ssn" placeholder="Enter Social" value={ssn} onChange={(e)=>onInputChange(e)}></input>
+                    <input type={"text"} className="form-control" name="ssn" placeholder="Enter Social" /*value={ssn} onChange={(e)=>onInputChange(e)}*/></input>
                 </div>
             </form>
         </div>
     </div>
-=======
-  return (
-    <div className="Container">OwnerReg</div>
->>>>>>> Stashed changes
   )
 }

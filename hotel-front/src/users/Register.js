@@ -43,11 +43,7 @@ export default function Register() {
                     position:"Owner"
                 }
                 await axios.post("http://localhost:8080/employee", emp);
-<<<<<<< Updated upstream
                 navigate("/OwnerReg");
-=======
-                navigate("/");
->>>>>>> Stashed changes
             }
             else {
                 await axios.post("http://localhost:8080/employee", user);
