@@ -9,12 +9,13 @@ export default function Register() {
 
     //Object for users and useState React Hooks
     const [user, setUser]=useState({
+        status:"",
         name:"",
         age:"",
         address:"",
         userName:"",
         password:"",
-        status:""
+
     })
     
     //Sets input values to user information at registration, check value attribute in inputs
@@ -25,11 +26,35 @@ export default function Register() {
         setUser({...user,[e.target.name]:e.target.value});
     }
 
-    //Need to add a if check on status to create employee object. To implement owner, add isAdmin property to employee.java
+    //Need to add a if check on status to create employee object. To implement owner, add admin property to employee.java
     const onSubmit= async (e)=>{
         e.preventDefault();
-        await axios.post("http://localhost:8080/customer", user);
-        navigate("/");
+
+        if(status === "Customer") {
+            await axios.post("http://localhost:8080/customer", user);
+            navigate("/");
+        }
+
+        else if (status === "Employee" || status === "Owner") {
+            if (status === "Owner") {
+                const emp = {
+                    ...user,
+                    isAdmin:"true",
+                    position:"Owner"
+                }
+                await axios.post("http://localhost:8080/employee", emp);
+<<<<<<< Updated upstream
+                navigate("/OwnerReg");
+=======
+                navigate("/");
+>>>>>>> Stashed changes
+            }
+            else {
+                await axios.post("http://localhost:8080/employee", user);
+                navigate("/");
+            }
+
+        }
     }
 
   return (
@@ -80,7 +105,6 @@ export default function Register() {
                                 </label>
                             </div>
                             <div className="form-check">
-                                
                                 <input className="form-check-input" type="radio" name="status" id="RadioEmployee" value={"Employee"} />
                                 <label className="form-check-label" for="RadioEmployee">
                                     Employee

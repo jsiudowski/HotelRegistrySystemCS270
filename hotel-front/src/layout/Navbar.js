@@ -10,9 +10,9 @@ export default function Navbar() {
               <Link className="navbar-brand" to="/">IL Hotel Manager</Link>
 
               <div className="btn-group">  
-                <button className="btn btn-outline-light">About Us</button>
+                <Link className="btn btn-outline-light" to="/aboutus">About Us</Link>
 
-                <button className="btn btn-outline-light">Contact Us</button>
+                <Link className="btn btn-outline-light" to="/contactus">Contact Us</Link>
 
                 <Link className="btn btn-outline-light" to="/login">Log In</Link>
 
