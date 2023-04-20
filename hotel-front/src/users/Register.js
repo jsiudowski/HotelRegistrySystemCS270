@@ -43,7 +43,7 @@ export default function Register() {
                     position:"Owner"
                 }
                 await axios.post("http://localhost:8080/employee", emp);
-                navigate("/");
+                navigate("/OwnerReg");
             }
             else {
                 await axios.post("http://localhost:8080/employee", user);

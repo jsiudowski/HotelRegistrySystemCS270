@@ -18,6 +18,8 @@ export default function Home() {
     setCustomers(result.data);
   }
 
+  //In order to get owners, there is a way to do a sort of SQL WHERE statement with axios. I don't recall how but...
+
   const loadEmployees=async()=>{
     const result=await axios.get("http://localhost:8080/employees");
     setEmployees(result.data);
