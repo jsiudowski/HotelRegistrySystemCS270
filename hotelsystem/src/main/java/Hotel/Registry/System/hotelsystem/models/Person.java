@@ -32,8 +32,8 @@ public abstract class Person {
         person.name = name;
     }
 
-    public String getName(Person person) {
-        return person.name;
+    public String getName() {
+        return this.name;
     }
 
     public void setAddress(Person person, String address) {

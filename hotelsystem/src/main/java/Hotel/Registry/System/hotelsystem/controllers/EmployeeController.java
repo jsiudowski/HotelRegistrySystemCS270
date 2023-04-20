@@ -31,15 +31,19 @@ public class EmployeeController {
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
     }
 
-    /*
-    //This will be a way to edit employee data
+
     @PutMapping("/employee/{id}")
-    Employee updateEmployeeSsn(@RequestBody Employee newEmployee,@PathVariable Long id){
-        return employeeRepository.findAllById(id)
+    Employee updateEmployee(@RequestBody Employee newEmployee, @PathVariable Long id){
+        return employeeRepository.findById(id)
                 .map(employee -> {
-                    employee.setEmployeeSsn(newEmployee.getEmployeeSSN())
+                    employee.setEmployeeID(newEmployee.getEmployeeID());
+                    employee.setEmployeeSSN(newEmployee.getEmployeeSSN());
+                    employee.setEmployeePosition(newEmployee.getEmployeePosition());
+                    employee.setEmployeeName(newEmployee.getName());
+                    return employeeRepository.save(employee);
                 })
+                .orElseThrow(()-> new EmployeeNotFoundException(id));
     }
-    */
+
 
 }

@@ -33,44 +33,44 @@ public class Employee extends Person {
     */
 
     // employee Name 
-    public void setEmployeeName(Employee Employee, String newEmployeeName)
+    public void setEmployeeName(String newEmployeeName)
     {
-        Employee.name = newEmployeeName;
+        this.name = newEmployeeName;
     }
 
-    public String getEmployeeName(Employee Employee)
+    public String getEmployeeName()
     {
-        return Employee.name;
+        return this.name;
     }
     
     // employee Ssn 
-    public void setEmployeeSSN(Employee Employee, String Ssn)
+    public void setEmployeeSSN(String Ssn)
     {
-        Employee.ssn = Ssn;
+        this.ssn = Ssn;
     }
 
-    public String getEmployeeSSN(Employee Employee)
+    public String getEmployeeSSN()
     {
-        return Employee.ssn;
+        return this.ssn;
     }
 
     // employee ID 
-    public void setEmployeeID(Employee Employee, Long employeeId) {
-        Employee.employeeId = employeeId;
+    public void setEmployeeID(Long employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public Long getEmployeeID(Employee Employee) {
-        return Employee.employeeId;
+    public Long getEmployeeID() {
+        return this.employeeId;
     }
 
     // employee position 
 
-    public void setEmployeePosition(Employee Employee, String position) {
-        Employee.position = position ;
+    public void setEmployeePosition(String position) {
+        this.position = position ;
     }
 
-    public String getEmployeePosition(Employee Employee) {
-        return Employee.position;
+    public String getEmployeePosition() {
+        return this.position;
         
     }
 
