@@ -8,10 +8,7 @@ import Login from './users/Login';
 import Register from './users/Register';
 import Customer from './users/Customers';
 import ContactUs from './pages/ContactUs';
-<<<<<<< Updated upstream
 import OwnerReg from './users/OwnerReg';
-=======
->>>>>>> Stashed changes
 
 function App() {
   return (
@@ -27,11 +24,7 @@ function App() {
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/customers" element={<Customer/>}/>
-<<<<<<< Updated upstream
         <Route exact path="/OwnerReg" element={<OwnerReg/>}/>
-        
-=======
->>>>>>> Stashed changes
       </Routes>
       
       </Router>
