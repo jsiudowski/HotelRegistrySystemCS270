@@ -16,8 +16,6 @@ export default function Navbar() {
 
                 <Link className="btn btn-outline-light" to="/login">Log In</Link>
 
-                <Link className="btn btn-outline-light" to="/Create/ManageHotel">Create / Manage Hotels</Link>
-
               </div>
             </div>
         </nav>
