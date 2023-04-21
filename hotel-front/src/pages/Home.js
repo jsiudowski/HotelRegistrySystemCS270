@@ -14,21 +14,33 @@ export default function Home() {
   }, []);
 
   const loadCustomers=async()=>{
-    const result=await axios.get("http://localhost:8080/customers");
+    let result=await axios.get("http://localhost:8080/customers");
     setCustomers(result.data);
   }
 
-  //In order to get owners, there is a way to do a sort of SQL WHERE statement with axios. I don't recall how but...
+
+  const sortBy = (result, filterByPosition) => {
+    const sortedArray = [];
+    for (const x of result.data) {
+      if (x.position === filterByPosition) {
+        sortedArray.push(x);
+      }
+    }
+    return sortedArray;
+  }
+
 
   const loadEmployees=async()=>{
-    const result=await axios.get("http://localhost:8080/employees");
+    let result=await axios.get("http://localhost:8080/employees");
     setEmployees(result.data);
   }
 
   const loadOwners=async()=>{
-    const result=await axios.get("http://localhost:8080/employees");
-    const own = result.filter(person => person.position === 'Owner');
-    setOwners(own.data);
+    let result=await axios.get("http://localhost:8080/employees");
+    console.log("Result:", result.data);
+    
+    let ownerArray = sortBy(result, "Owner");
+    setOwners(ownerArray);
   }
 
   return (
@@ -67,7 +79,7 @@ export default function Home() {
               <th scope="col">Name</th>
               <th scope="col">Age</th>
               <th scope="col">Address</th>
-              <th scope="col">Is Admin?</th>
+              <th scope="col">Position</th>
             </tr>
           </thead>
           <tbody>
@@ -78,7 +90,7 @@ export default function Home() {
                 <td>{employee.name}</td>
                 <td>{employee.age}</td>
                 <td>{employee.address}</td>
-                <td>{employee.isAdmin}</td>
+                <td>{employee.position}</td>
                 </tr>
               ))
             }
@@ -105,7 +117,7 @@ export default function Home() {
                 <td>{owner.name}</td>
                 <td>{owner.age}</td>
                 <td>{owner.address}</td>
-                <td>{owner.isAdmin}</td>
+                <td>{owner.admin}</td>
                 </tr>
               ))
             }
