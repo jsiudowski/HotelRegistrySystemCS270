@@ -9,6 +9,7 @@ import Register from './users/Register';
 import Customer from './users/Customers';
 import ContactUs from './pages/ContactUs';
 import EmployeeReg from './users/EmployeeReg';
+import UserControl from './pages/UserControl';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/customers" element={<Customer/>}/>
         <Route exact path="/EmployeeReg" element={<EmployeeReg/>}/>
+        <Route exact path ="/UserControl" element={<UserControl/>}/>
       </Routes>
       
       </Router>
