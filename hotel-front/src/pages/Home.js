@@ -27,7 +27,8 @@ export default function Home() {
 
   const loadOwners=async()=>{
     const result=await axios.get("http://localhost:8080/employees");
-    setOwners(result.data);
+    const own = result.filter(person => person.position === 'Owner');
+    setOwners(own.data);
   }
 
   return (
