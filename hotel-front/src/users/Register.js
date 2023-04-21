@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
@@ -42,16 +42,20 @@ export default function Register() {
                     isAdmin:"true",
                     position:"Owner"
                 }
+
+                //Duplicate code, compatible with leading owners to different pages
                 await axios.post("http://localhost:8080/employee", emp);
-                navigate("/OwnerReg");
+                navigate(`/EmployeeReg/${user.id}`);
             }
             else {
                 await axios.post("http://localhost:8080/employee", user);
-                navigate("/");
+                navigate(`/EmployeeReg/${user.id}`);
             }
 
         }
     }
+
+
 
   return (
     <div className="container">
@@ -92,27 +96,16 @@ export default function Register() {
                     <label className="form-label" htmlFor="RadioChecker">
                             Status
                     </label>
-                    <div className="border rounded p-4 mt-2" id="RadioChecker">
-                        <form onChange={(e)=>onInputChange(e)} value={status}>
-                            <div className="form-check">
-                                <input className="form-check-input" type="radio" name="status" id="RadioOwner" value={"Owner"} />
-                                <label className="form-check-label" for="RadioOwner">
-                                    Owner
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="radio" name="status" id="RadioEmployee" value={"Employee"} />
-                                <label className="form-check-label" for="RadioEmployee">
-                                    Employee
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="radio" name="status" id="RadioCustomer" value={"Customer"} />
-                                <label className="form-check-label" for="RadioCustomer">
-                                    Customer
-                                </label>
-                            </div>
-                        </form>
+
+
+                    <div className="border rounded p-4 mt-2 form-group" id="RadioChecker" onChange={(e)=>onInputChange(e)} value={status}>
+                        <label className="mb-2">User Type</label>
+                        <select name="status" className="form-control">
+                            <option value={"Customer"}>Customer</option>
+                            <option value={"Employee"}>Employee</option>
+                            <option value={"Owner"}>Owner</option>
+                        </select>
+
                         <div className="btn">
                             <button type={"submit"} className="btn btn-outline-dark mx-2">Submit</button>
                             <button type={"reset"} className="btn btn-outline-danger mx-2">Reset</button>
