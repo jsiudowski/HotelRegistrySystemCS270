@@ -59,11 +59,11 @@ export default function Register() {
             <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
                 <h2 className="text-center m-4">Register</h2>
                 <form onSubmit={(e)=>onSubmit(e)}>
-                    <div className="mb-3">
-                        <label htmlFor="Name" className="form-label">
+        <label htmlFor="Name" className="form-label">
                             Name
                         </label>
-                        <input type={"text"} className="form-control" name="name" placeholder="Enter Name" value={name} onChange={(e)=>onInputChange(e)}></input>
+                        <input type={"text"} className="form-control" name="name" placeholder="Enter Name" value={name} onChange={(e)=>onInputChange(e)}></input>            <div className="mb-3">
+                        
                     </div>
                     <div className="mb-3">
                         <label htmlFor="Age" className="form-label">
