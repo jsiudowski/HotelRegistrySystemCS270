@@ -19,29 +19,38 @@ export default function Home() {
   }
 
 
-  const sortBy = (result, filterByPosition) => {
+  //Creates a sortBy function that taskes a payload and position string
+  const sortBy = (result, positionFilter, nullBool) => {
     const sortedArray = [];
+    
     for (const x of result.data) {
-      if (x.position === filterByPosition) {
+      if (nullBool && x.position !== positionFilter){
         sortedArray.push(x);
       }
+      else if ( !nullBool && x.position === positionFilter) {
+        sortedArray.push(x);
+      }
+
     }
     return sortedArray;
   }
 
 
+  //Funcitons to load the different kinds of user objects
   const loadEmployees=async()=>{
     let result=await axios.get("http://localhost:8080/employees");
-    setEmployees(result.data);
+    let employeeArray = sortBy(result, "Owner", true);
+    console.log("Emp: ", employeeArray);
+    setEmployees(employeeArray);
   }
 
   const loadOwners=async()=>{
     let result=await axios.get("http://localhost:8080/employees");
-    console.log("Result:", result.data);
-    
     let ownerArray = sortBy(result, "Owner");
+    console.log(ownerArray);
     setOwners(ownerArray);
   }
+
 
   return (
     <div className='container'>
@@ -106,7 +115,6 @@ export default function Home() {
               <th scope="col">Name</th>
               <th scope="col">Age</th>
               <th scope="col">Address</th>
-              <th scope="col">Is Admin?</th>
             </tr>
           </thead>
           <tbody>
@@ -117,7 +125,6 @@ export default function Home() {
                 <td>{owner.name}</td>
                 <td>{owner.age}</td>
                 <td>{owner.address}</td>
-                <td>{owner.admin}</td>
                 </tr>
               ))
             }
