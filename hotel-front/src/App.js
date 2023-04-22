@@ -10,6 +10,8 @@ import Customer from './users/Customers';
 import ContactUs from './pages/ContactUs';
 import EmployeeReg from './users/EmployeeReg';
 import UserControl from './pages/UserControl';
+import CustomerLanding from './pages/CustomerLanding';
+import EmployeeLanding from './pages/EmployeeLanding';
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/customers" element={<Customer/>}/>
         <Route exact path="/EmployeeReg/:id" element={<EmployeeReg/>}/>
-        <Route exact path ="/UserControl" element={<UserControl/>}/>
+        <Route exact path="/UserControl" element={<UserControl/>}/>
+        <Route exact path="/CustomerLanding/:id" element={<CustomerLanding/>}/>
+        <Route exact path="/EmployeeLanding/:id" element={<EmployeeLanding/>}/>
       </Routes>
       
       </Router>

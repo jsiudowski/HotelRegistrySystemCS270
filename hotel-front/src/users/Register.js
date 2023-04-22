@@ -26,13 +26,14 @@ export default function Register() {
         setUser({...user,[e.target.name]:e.target.value});
     }
 
+
     //Need to add a if check on status to create employee object. To implement owner, add admin property to employee.java
     const onSubmit= async (e)=>{
         e.preventDefault();
 
         if(status === "Customer") {
-            await axios.post("http://localhost:8080/customer", user);
-            navigate("/");
+            let response = await axios.post("http://localhost:8080/customer", user);
+            navigate(`/CustomerLanding/${response.data.customerID}`);
         }
 
         else if (status === "Employee" || status === "Owner") {
@@ -44,12 +45,13 @@ export default function Register() {
                 }
 
                 //Duplicate code, compatible with leading owners to different pages
-                await axios.post("http://localhost:8080/employee", emp);
-                navigate(`/EmployeeReg/${user.id}`);
+                let response = await axios.post("http://localhost:8080/employee", emp);
+                navigate(`/EmployeeReg/${response.data.employeeId}`);
             }
             else {
-                await axios.post("http://localhost:8080/employee", user);
-                navigate(`/EmployeeReg/${user.id}`);
+                let response = await axios.post("http://localhost:8080/employee", user);
+
+                navigate(`/EmployeeReg/${response.data.employeeId}`);
             }
 
         }
@@ -101,6 +103,7 @@ export default function Register() {
                     <div className="border rounded p-4 mt-2 form-group" id="RadioChecker" onChange={(e)=>onInputChange(e)} value={status}>
                         <label className="mb-2">User Type</label>
                         <select name="status" className="form-control">
+                            <option>--- Select User Type ---</option>
                             <option value={"Customer"}>Customer</option>
                             <option value={"Employee"}>Employee</option>
                             <option value={"Owner"}>Owner</option>
