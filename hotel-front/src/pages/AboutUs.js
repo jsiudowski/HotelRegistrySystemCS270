@@ -21,7 +21,7 @@ export default function AboutUs() {
                     <br/>
                     <span>Vincent Wawak - CEO</span>
                     <br/>
-                    <span>Abdelhadi Tawill - CEO</span>
+                    <span>Abedelhadi Tawill - CEO</span>
                     <br/>
                     <span>Ananda Abeyesundere - CEO</span>
                     <br/>
