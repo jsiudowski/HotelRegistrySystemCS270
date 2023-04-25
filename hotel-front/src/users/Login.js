@@ -29,7 +29,15 @@ export default function LoginForm() {
         for (let i = 0; i < employees.length; i++) {
 
             if (employees[i].userName === userName && employees[i].password === password) {
-                navigate(`/EmployeeLanding/${employees[i].employeeId}`);
+
+                if (employees[i].position === "Owner") {
+                    navigate(`/OwnerLanding/${employees[i].employeeId}`);
+                }
+                else {
+                    navigate(`/EmployeeLanding/${employees[i].employeeId}`);
+                }
+
+                
                 
             }
             else {
