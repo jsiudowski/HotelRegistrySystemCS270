@@ -46,12 +46,12 @@ export default function Register() {
 
                 //Duplicate code, compatible with leading owners to different pages
                 let response = await axios.post("http://localhost:8080/employee", emp);
-                navigate(`/EmployeeReg/${response.data.employeeId}`);
+                navigate(`/OwnerLanding/${response.data.employeeId}`);
             }
             else {
                 let response = await axios.post("http://localhost:8080/employee", user);
 
-                navigate(`/EmployeeReg/${response.data.employeeId}`);
+                navigate(`/EmployeeLanding/${response.data.employeeId}`);
             }
 
         }

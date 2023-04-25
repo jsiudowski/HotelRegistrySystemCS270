@@ -3,18 +3,21 @@ package Hotel.Registry.System.hotelsystem.models;
 import jakarta.persistence.*;
 import org.hibernate.annotations.Columns;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
+
 
 @Entity
 public class Hotel {
 
     //Variables
     public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long hotelId;
+    public String hotelName;
     public String location;
-    public ArrayList<String> amenities = new ArrayList<>();
+    public String amenities;
     private int numEmployees;
-    //public ArrayList<Floor> floors = new ArrayList<>();
-    //public ArrayList<Room> rooms = new ArrayList<>();
 
     //Constructors
 
@@ -23,11 +26,10 @@ public class Hotel {
         this.numEmployees = 0;
     }
 
-    public Hotel(int roomNum, String loc, ArrayList<String> am, int numEm) {
+    public Hotel(int roomNum, String loc, String am, int numEm) {
 
         this.location = loc;
-        this.amenities.addAll(am);
-
+        this.amenities = am;
         if (numEm >= 0) {
         this.numEmployees = numEm;
         } else {
@@ -37,6 +39,8 @@ public class Hotel {
 
     //Setters and Getters
 
+
+
     public Long getHotelId() {
         return this.hotelId;
     }
@@ -45,12 +49,13 @@ public class Hotel {
         this.hotelId = hotelId;
     }
 
-    /*
-    public int getRoomAmount() {
-        return rooms.size();
+    public String getHotelName() {
+        return hotelName;
     }
-    */
-    //Commenting out for debugging
+
+    public void setHotelName(String hotelName) {
+        this.hotelName = hotelName;
+    }
 
     public void setLocation(String loc) {
         this.location = loc;
@@ -64,12 +69,15 @@ public class Hotel {
     //Methods for amenities, since it's an ArrayList this can be appended to or modified even more
 
     public void addAmenity(String amenity) {
-        this.amenities.add(amenity);
+        this.amenities = this.amenities + amenity;
     }
 
+    //Not worrying about this right now for the sake of getting the app to work
+    /*
     public void removeAmenity(int index) {
         this.amenities.remove(index);
     }
+
 
     public ArrayList<String> getAmenitiesArray() {
         return this.amenities;
@@ -84,6 +92,15 @@ public class Hotel {
     }
 
     //End of Amenities Methods
+     */
+
+    public String getAmenities() {
+        return amenities;
+    }
+
+    public void setAmenities(String amenities) {
+        this.amenities = amenities;
+    }
 
     public void setNumEmployees(int num) {
         if (num >= 0) {

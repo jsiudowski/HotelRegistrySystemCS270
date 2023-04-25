@@ -6,6 +6,10 @@ export default function EmployeeReg() {
 
   let navigate=useNavigate();
 
+  //Ignore file
+  //Time dependent implementation
+
+
   const {id} = useParams()
 
   //Regex for social secutiry

@@ -12,6 +12,8 @@ import EmployeeReg from './users/EmployeeReg';
 import UserControl from './pages/UserControl';
 import CustomerLanding from './pages/CustomerLanding';
 import EmployeeLanding from './pages/EmployeeLanding';
+import OwnerLanding from './pages/OwnerLanding';
+import HotelCreator from './pages/HotelCreator';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route exact path="/UserControl" element={<UserControl/>}/>
         <Route exact path="/CustomerLanding/:id" element={<CustomerLanding/>}/>
         <Route exact path="/EmployeeLanding/:id" element={<EmployeeLanding/>}/>
+        <Route exact path="/OwnerLanding/:id" element={<OwnerLanding/>}/>
+        <Route exact path="/HotelCreator/:id" element={<HotelCreator/>}/>
       </Routes>
       
       </Router>
