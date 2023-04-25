@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title-black-border {
+  border: 1px solid black;
+  length: 15px;
+  padding: 15rem;
+  margin: 5rem;
+}
