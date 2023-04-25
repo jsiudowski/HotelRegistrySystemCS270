@@ -18,6 +18,8 @@ export default function ContactUs() {
                         <span><strong>Phone:</strong> (123) 456-7890</span>
                         <br/>
                         <span><strong>Email:</strong> infiniteloopcs270@gmail.com</span>
+                        <br/>
+                        <a href = "mailto: infiniteloopcs270@gmail.com">Email Us!</a>
                         
                     </section>
                 </main>
