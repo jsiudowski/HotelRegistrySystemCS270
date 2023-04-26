@@ -13,6 +13,7 @@ code {
 }
 
 .home-page-title-black-border {
+ 
   border: 1px solid black;
   length: 10px;
   padding: 2rem;
@@ -22,11 +23,27 @@ code {
 }
 
 .home-page-info-black-border {
+  length: 10px;
+  padding: 2rem;
+  margin: 0rem;
+  font-family: -apple-system;
+  font-size: 30px;
+}
+
+.home-page-bottom-black-border {
+  text-align: left;
   border: 1px solid black;
-  height: 4px;
-  width: 10px;
-  padding: 10rem;
-  margin: 1rem;
+  length: 10px;
+  padding: 2rem;
+  margin: 0rem;
   font-family: -apple-system;
   font-size: 12px;
+}
+
+button {
+  background-color: skyblue;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
 }
