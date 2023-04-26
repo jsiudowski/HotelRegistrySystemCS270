@@ -8,10 +8,17 @@ export default function AboutUs() {
                 </header>
                 <br/>
                 <main>
-                <section id="our-story">
-                    <h2>Our Story</h2>
-                    <p>We are doing this as a dedicated project for a course called CS270 Software Development Practices, AKA Powerpoint Class</p>
-                </section>
+                <img src="https://www.teachingchannel.com/wp-content/uploads/2023/03/cropped_school-classroom-1-19-scaled.jpg"
+                             width={1000} height={400}></img>
+
+                <div class="our-story-image-text our-story-image-background ">
+                    <section id="our-story">
+                        <h2>Our Story</h2>
+                        <p>We are doing this as a dedicated project for a course called CS270 Software Development Practices, AKA Powerpoint Class</p>
+                        
+                    </section>
+                </div>
+
                 <br/>
                 <section id="team">
                     <h2>Our Team</h2>

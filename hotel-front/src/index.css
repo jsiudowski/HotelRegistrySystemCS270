@@ -117,3 +117,17 @@ code {
 
 /* STUFF FOR ABOUTUS.JS */
 /*======================*/
+
+.our-story-image-background{
+  position: absolute;
+  border-radius: 35px;
+  top: 300px;
+  right: 370px;
+  padding: 10px;
+  background-color: grey;
+  opacity: .9;
+}
+.our-story-image-text{
+  font-family: -BlinkMacSystemFont;
+  
+}
