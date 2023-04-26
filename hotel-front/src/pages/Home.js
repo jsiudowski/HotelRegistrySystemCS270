@@ -8,8 +8,11 @@ export default function HomePage() {
   let navigate=useNavigate();
 
 const navigateToCustomerLanding = () => {
-  
   navigate('/CustomerLanding');
+}
+
+const navigateToHotelCreator = () => {
+  navigate('HotelCreator');
 }
 
   return (
@@ -23,24 +26,54 @@ const navigateToCustomerLanding = () => {
             width={1300} height={500}></img> 
 
         <main>
-          <div class="top-right-hotel-location-input-img-load">Find a Location
+          <div class="top-left-hotel-location-input-img-load">Find a Location:
           <div className='location'>
             <div className="col-mid-6 offset-mid-3 border rounded p-4 mt-2 shadow">
             <h2>where to?</h2>
             <div className="mb-4">
               <label htmlFor="location" className="form-location"></label>
-              <button onClick={navigateToCustomerLanding} className="form-control" name="location"></button>
+             <button onClick={navigateToCustomerLanding} className="registry-button-link" name="location">Create Reservation!</button>
             </div>
             </div>
           </div>
           </div>
         </main>
+        <br></br>
 
-        <div class ="d-lg flex">
-            <br></br>
-            <p>Choose a wide variety of rooms and services across multiple hotels</p>
+
+      </div>
+      <div class = "home-page-title-black-border-image"> 
+              <img src="https://news.mit.edu/sites/default/files/images/201306/20130603150017-0.jpg"width={940} height={700}>
+              </img>
+            </div>
+            <div class="bottom-img-hotel-creation-input-img-load">Publish a Location:
+            <div className='location'>
+              <div className="col-mid-6 offset-mid-3 border rounded p-4 mt-2 shadow">
+              <h2>Hotel's Location?</h2>
+              <div className="mb-4">
+                <label htmlFor="location" className="form-location"></label>
+                <button onClick={navigateToHotelCreator} className="hotel-creation-button-link" name="location">Create Hotel!</button>
+              </div>
+              </div>
+            </div>
         </div>
+      <div>
+
+        
+      <main>
+        <div class ="sidebox-flex">
+            <br></br>
+            <div class = "sidebox-flex-items sidebox-item-1"> 
+            Choose a wide variety of rooms and services across multiple hotels
+            throughout our database!!</div>
+
+            <div class = "sidebox-flex-items sidebox-item-1"> 
+            Countless options all easy to use with no fees necessary  </div>
+          </div>
+
+        </main>
       </div>  
+
     </div>
   )
 }
