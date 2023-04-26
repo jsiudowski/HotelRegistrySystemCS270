@@ -1,19 +1,44 @@
-import React from 'react'
-
+import axios from 'axios';
+import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
+
+
+  let navigate=useNavigate();
+
+const navigateToCustomerLanding = () => {
+  
+  navigate('/CustomerLanding');
+}
+
   return (
     <div>HomePage
       <div class = "containter">
         <h1></h1>
         <div class ="d-lg-flex flex row"> 
           <div class = "home-page-title-black-border"> Welcome To Infinite Loop Services</div>
-          <img src ="https://media.cntraveler.com/photos/5be1b38dcfd2bb17f97a7a96/16:9/w_3999,h_2249,c_limit/Monastero-Santa-Rosa-Hotel-&-Spa__2018_MSRdusktviewproperty"></img>
         </div>
-        <div class ="d-lg flex flex-column">
-          <div class = "home-page-info-black-border">
-            Choose a wide variety of rooms and services across multiple hotels
+        <img src ="https://media.cntraveler.com/photos/5be1b38dcfd2bb17f97a7a96/16:9/w_3999,h_2249,c_limit/Monastero-Santa-Rosa-Hotel-&-S5%pa__2018_MSRdusktviewproperty"
+            width={1300} height={500}></img> 
+
+        <main>
+          <div class="top-right-hotel-location-input-img-load">Find a Location
+          <div className='location'>
+            <div className="col-mid-6 offset-mid-3 border rounded p-4 mt-2 shadow">
+            <h2>where to?</h2>
+            <div className="mb-4">
+              <label htmlFor="location" className="form-location"></label>
+              <button onClick={navigateToCustomerLanding} className="form-control" name="location"></button>
+            </div>
+            </div>
           </div>
+          </div>
+        </main>
+
+        <div class ="d-lg flex">
+            <br></br>
+            <p>Choose a wide variety of rooms and services across multiple hotels</p>
         </div>
       </div>  
     </div>

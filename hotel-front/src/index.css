@@ -30,3 +30,11 @@ code {
   font-family: -apple-system;
   font-size: 12px;
 }
+
+/* Bottom left text For Home Page image  */
+.top-right-hotel-location-input-img-load {
+  position: absolute;
+  top: 250px;
+  left: 170px;
+  color: white;
+}
