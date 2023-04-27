@@ -36,7 +36,7 @@ function App() {
         <Route exact path="/EmployeeLanding/:id" element={<EmployeeLanding/>}/>
         <Route exact path="/OwnerLanding/:id" element={<OwnerLanding/>}/>
         <Route exact path="/HotelCreator/:id" element={<HotelCreator/>}/>
-        <Route exact path="/SandwichEasterEgg/:id" element={<SandwichEasterEgg/>}/>
+        <Route exact path="/SandwichEasterEgg" element={<SandwichEasterEgg/>}/>
       </Routes>
       
       </Router>

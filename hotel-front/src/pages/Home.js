@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
 export default function HomePage() {
@@ -9,11 +9,11 @@ export default function HomePage() {
 let navigate=useNavigate();
 
 const navigateToCustomerLanding = () => {
-  navigate('/CustomerLanding');
+  navigate('/login');
 }
 
 const navigateToHotelCreator = () => {
-  navigate('/HotelCreator');
+  navigate('/login');
 }
 
 const navigateToSandwichEasterEgg = () => {
@@ -72,11 +72,11 @@ const navigateToSandwichEasterEgg = () => {
             Choose a wide variety of rooms and services across multiple hotels
             throughout our database!!</div>
 
-            <div class = "sidebox-flex-items sidebox-item-1"> 
+            <div class = "sidebox-flex-items"> 
             <button onClick={navigateToSandwichEasterEgg} className="easter-egg-button-link" name="location">
             Countless options all easy to use with no fees necessary  </button>
             </div>
-          </div>
+        </div>
 
         </main>
       </div>  
