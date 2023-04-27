@@ -15,6 +15,7 @@ import EmployeeLanding from './pages/EmployeeLanding';
 import OwnerLanding from './pages/OwnerLanding';
 import HotelCreator from './pages/HotelCreator';
 import SandwichEasterEgg from './pages/SandwichEasterEgg';
+import CreateAndManageHotel from './pages/CreateAndManageHotel';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route exact path="/OwnerLanding/:id" element={<OwnerLanding/>}/>
         <Route exact path="/HotelCreator/:id" element={<HotelCreator/>}/>
         <Route exact path="/SandwichEasterEgg" element={<SandwichEasterEgg/>}/>
+        <Route exact path="/CreateAndManageHotel/:id" element={<CreateAndManageHotel/>}/>
       </Routes>
       
       </Router>
