@@ -1,18 +1,23 @@
 import axios from 'axios';
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
 
 
-  let navigate=useNavigate();
+let navigate=useNavigate();
 
 const navigateToCustomerLanding = () => {
   navigate('/CustomerLanding');
 }
 
 const navigateToHotelCreator = () => {
-  navigate('HotelCreator');
+  navigate('/HotelCreator');
+}
+
+const navigateToSandwichEasterEgg = () => {
+  navigate('/SandwichEasterEgg');
 }
 
   return (
@@ -68,7 +73,9 @@ const navigateToHotelCreator = () => {
             throughout our database!!</div>
 
             <div class = "sidebox-flex-items sidebox-item-1"> 
-            Countless options all easy to use with no fees necessary  </div>
+            <button onClick={navigateToSandwichEasterEgg} className="easter-egg-button-link" name="location">
+            Countless options all easy to use with no fees necessary  </button>
+            </div>
           </div>
 
         </main>

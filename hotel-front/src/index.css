@@ -22,9 +22,6 @@ code {
   font-size: 50px;
 }
 
-
-
-
 .sidebox-flex{
   display: flex;
   flex-direction: column;
@@ -56,10 +53,6 @@ code {
   min-height: 100px;
 }
 
-
-
-
-
 .home-page-title-black-border-image{
   border: 1px solid black;
   position: absolute;
@@ -84,6 +77,16 @@ code {
   color: blue;
   background-color: black;
   cursor: pointer;
+}
+
+.easter-egg-button-link{
+  display: flex;
+  border-radius: 35px;
+  width: 300px;
+  font-size: 30px;
+  font-family: -apple-system;
+  background-color: rgb(242, 208, 208);
+  color: black;
 }
 
 .home-page-info-black-border {
