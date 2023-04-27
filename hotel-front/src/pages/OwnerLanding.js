@@ -18,13 +18,18 @@ export default function OwnerLanding() {
     navigate(`/HotelCreator/${id}`);
   }
 
+  const onManage = async (e) => {
+    console.log(id);
+    navigate(`/CreateAndManageHotel/${id}`);
+  }
+
   return (
     <div className="container">
         <h1>Welcome *insert name*</h1>
         <div>
             <button onClick={(e) => onCreate()}>Create Hotel</button>
-            <button>Manage Hotels</button>
-            <button>Edit Hotel</button>
+            <button onClick={(e) => onManage()}>Manage Hotels</button>
+            <button onClick={(e) => onManage()}>Edit Hotel</button>
         </div>
     </div>
   )
