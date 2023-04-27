@@ -16,7 +16,6 @@ code {
 /*======================*/
 .home-page-title-black-border {
   border: 1px solid black;
-  length: 10px;
   padding: 2rem;
   margin: 0rem;
   font-family: -apple-system;
@@ -36,7 +35,6 @@ code {
   left: 110px;
   height: 800px;
   width: 313px;
-  
 }
 
 .sidebox-flex-items{
@@ -120,14 +118,36 @@ code {
 
 .our-story-image-background{
   position: absolute;
+  border: 1px solid black;
   border-radius: 35px;
   top: 300px;
   right: 370px;
   padding: 10px;
-  background-color: grey;
-  opacity: .9;
+  background-color: lightblue;
+  opacity: .95;
 }
 .our-story-image-text{
   font-family: -BlinkMacSystemFont;
+  color: black; 
+  
+}
+
+.text-backgrounds-about-us{
+  font: -apple-system;
+  border: 1px solid black;
+  background-color: lightblue;
+  border-radius: 35px;
+  position: relative;
+  left: 380px;
+  opacity: .95;
+  margin:10px;
+  padding: 10px;
+  width: 500px;
+}
+.our-team-background{
+  padding: 10px;
+}
+
+.our-mission-background{
   
 }

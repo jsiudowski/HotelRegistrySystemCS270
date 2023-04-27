@@ -20,23 +20,28 @@ export default function AboutUs() {
                 </div>
 
                 <br/>
-                <section id="team">
-                    <h2>Our Team</h2>
-                    <span>Jon Siudowski - CEO</span>
-                    <br/>
-                    <span>Vincent Wawak - CEO</span>
-                    <br/>
-                    <span>Abedelhadi Tawill - CEO</span>
-                    <br/>
-                    <span>Ananda Abeyesundere - CEO</span>
-                    <br/>
-                    <span>Gavin Weiser - Janitor/Kitten Master</span>
-                </section>
+                <div class=" text-backgrounds-about-us our-team-background">
+                    <section id="team">
+                        <h2>Our Team</h2>
+                        <span>Jon Siudowski - CEO</span>
+                        <br/>
+                        <span>Vincent Wawak - CEO</span>
+                        <br/>
+                        <span>Abedelhadi Tawill - CEO</span>
+                        <br/>
+                        <span>Ananda Abeyesundere - CEO</span>
+                        <br/>
+                        <span>Gavin Weiser - CEO</span>
+                    </section>
+                </div>
+
                 <br/>
-                <section id="mission">
-                    <h2>Our Mission</h2>
-                    <p>Our mission is to provide the best service possible to our customers and to constantly improve our products and services.</p>
-                </section>
+                <div class ="text-backgrounds-about-us our-mission-background">
+                    <section id="mission">
+                        <h2>Our Mission</h2>
+                        <p>Our mission is to provide the best service possible to our customers and to constantly improve our products and services.</p>
+                    </section>
+                </div>
             
                 </main>
             
