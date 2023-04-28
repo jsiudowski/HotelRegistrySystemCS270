@@ -1,7 +1,5 @@
-import axios from 'axios';
-import React, {useState} from 'react';
-import { useNavigate, useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom'
 
 export default function HomePage() {
 
@@ -21,15 +19,13 @@ const navigateToSandwichEasterEgg = () => {
 }
 
   return (
-    <div>HomePage
+    <div>
       <div class = "containter">
-        <h1></h1>
         <div class ="d-lg-flex flex row"> 
           <div class = "home-page-title-black-border"> Welcome To Infinite Loop Services</div>
         </div>
         <img src ="https://media.cntraveler.com/photos/5be1b38dcfd2bb17f97a7a96/16:9/w_3999,h_2249,c_limit/Monastero-Santa-Rosa-Hotel-&-S5%pa__2018_MSRdusktviewproperty"
-            width={1300} height={500}></img> 
-
+            width={1300} height={500} alt=""></img> 
         <main>
           <div class="top-left-hotel-location-input-img-load">Find a Location:
           <div className='location'>
@@ -48,7 +44,7 @@ const navigateToSandwichEasterEgg = () => {
 
       </div>
       <div class = "home-page-title-black-border-image"> 
-              <img src="https://news.mit.edu/sites/default/files/images/201306/20130603150017-0.jpg"width={940} height={700}>
+              <img src="https://news.mit.edu/sites/default/files/images/201306/20130603150017-0.jpg"width={940} height={700} alt="">
               </img>
             </div>
             <div class="bottom-img-hotel-creation-input-img-load">Publish a Location:

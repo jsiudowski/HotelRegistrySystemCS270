@@ -65,8 +65,9 @@ code {
   display: flex;
   border-radius: 35px;
   padding: 20px 20px;
-  color: blue;
-  background-color: black;
+  border-color: white;
+  color: white;
+  background-color: transparent;
   cursor: pointer;
 }
 

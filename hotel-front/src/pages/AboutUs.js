@@ -9,7 +9,7 @@ export default function AboutUs() {
                 <br/>
                 <main>
                 <img src="https://www.teachingchannel.com/wp-content/uploads/2023/03/cropped_school-classroom-1-19-scaled.jpg"
-                             width={1000} height={400}></img>
+                             width={1000} height={400} alt=""></img>
 
                 <div class="our-story-image-text our-story-image-background ">
                     <section id="our-story">
