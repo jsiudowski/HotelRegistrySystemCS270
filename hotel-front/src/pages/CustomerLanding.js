@@ -17,6 +17,7 @@ export default function CustomerLanding() {
 
   //Initialize hotel as state variable
   const [hotel, setHotel] = useState("");
+  const [room, setRoom] = useState("");
 
   //Function to get the hotel object from DB
   const hotelGrabber = async (hotelId) => {
