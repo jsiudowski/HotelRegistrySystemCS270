@@ -13,24 +13,6 @@ public class Employee extends Person {
     private String ssn;
     public Boolean isAdmin;
 
-    /*
-    protected Employee()
-    {
-        position = "";
-        ssn = "";
-        isAdmin = false;
-        //Person.employee = true;
-        //The compiler doesn't like this^
-    }
-
-
-    public Employee(Hotel hotel,  String position, String Ssn, Boolean admin) {
-        this.hotel = hotel;
-        this.position = position;
-        this.ssn = Ssn;
-        this.isAdmin = admin;
-    }
-    */
 
     // employee Name 
     public void setEmployeeName(String newEmployeeName)
@@ -71,7 +53,6 @@ public class Employee extends Person {
 
     public String getEmployeePosition() {
         return this.position;
-        
     }
 
     public Boolean getAdmin() {

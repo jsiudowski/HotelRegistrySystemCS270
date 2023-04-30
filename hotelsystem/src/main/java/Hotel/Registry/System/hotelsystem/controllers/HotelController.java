@@ -1,5 +1,6 @@
 package Hotel.Registry.System.hotelsystem.controllers;
 
+import Hotel.Registry.System.hotelsystem.exception.HotelNotFoundException;
 import Hotel.Registry.System.hotelsystem.models.Hotel;
 import Hotel.Registry.System.hotelsystem.repository.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,4 +24,11 @@ public class HotelController {
 
     @GetMapping("/hotels")
     List<Hotel> getAllHotels() {return hotelRepository.findAll();}
+
+    @GetMapping("/hotel/{id}")
+    Hotel getHotelById(@PathVariable Long id){
+        return hotelRepository.findById(id)
+                .orElseThrow(() -> new HotelNotFoundException(id));
+    }
+
 }
