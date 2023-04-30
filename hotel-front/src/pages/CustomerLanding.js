@@ -1,6 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
+import axios from 'axios';
 
 export default function CustomerLanding() {
+
+  //Initialize state variable, JSON, reservation with empty default properties
+  const [reservation, setReservation] = useState({
+    customer:"",
+    hotel:"",
+    room:"",
+    startDate:"",
+    endDate:"",
+    isCheckedIn:"",
+    numGuests:""
+  });
+
+  //Initialize hotel as state variable
+  const [hotel, setHotel] = useState("");
+  const [room, setRoom] = useState("");
+
+  //Function to get the hotel object from DB
+  const hotelGrabber = async (hotelId) => {
+    return await axios.get(`http://localhost:8080/hotel/${hotelId}`);
+  }
+
+  //Function to get room object from DB
+  //ROOMS NEED TO BE CREATED
+  const roomGrabber = async (roomId) => {
+    return await axios.get(`http://localhost:8080/room/${roomId}`);
+  }
+
+  
+  const {id: customer} = useParams();
+
+  const onHotelChange=(e)=> {
+    let h = hotelGrabber(e);
+    setHotel(h);
+  }
+
+  const onInputChange=(e)=>{
+    setReservation({
+      customer:customer,
+      hotel:hotel,
+      room:room,
+      ...reservation,
+      [e.target.name]:e.target.value});
+} 
+
+
   return (
     <div>
       <div className='container'>
@@ -20,7 +67,7 @@ export default function CustomerLanding() {
               <br/><br/>
               <span>Enter State</span>
               <br/>
-              <input type = {"text"} placeholder="Enter State"></input>
+              <input type = {"text"} placeholder="Enter Hotel Id"></input>
               <br/>
               <span>Enter City</span>
               <br/>
