@@ -27,11 +27,11 @@ code {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  background-color: rgba(253, 245, 207, 0.952);
+  background-color: rgba(51,87,155,255);
 
   position: absolute;
   left: 110px;
-  height: 800px;
+  height: 700px;
   width: 313px;
 }
 
@@ -42,16 +42,24 @@ code {
   font-size: 30px;
   font-family: -apple-system;
   border: 1px solid black;
-  background-color: rgba(250, 255, 218, 0.822);
-  color: black;
+  background-color: rgb(51,87,155,255);
+  color: rgb(255, 255, 255);
 }
 
 .sidebox-item-1{
-  min-height: 100px;
+  min-height: auto;
 }
 
 .sidebox-item-2{
-  min-height: 100px;
+  min-height: auto;
+}
+
+.sidebox-item-3{
+  min-height: auto;
+}
+
+.sidebox-item-3{
+  min-height: auto;
 }
 
 .home-page-title-black-border-image{
@@ -87,28 +95,14 @@ code {
   border-radius: 35px;
   width: 300px;
   font-size: 30px;
+  border: 1px solid black;
   font-family: -apple-system;
-  background-color: rgb(250, 255, 218, 0.822);
+  background-color: rgba(24, 204, 244);
   color: black;
 }
 
-.home-page-info-black-border {
-  length: 10px;
-  padding: 2rem;
-  margin: 0rem;
-  font-family: -apple-system;
-  font-size: 30px;
-}
 
-.home-page-bottom-black-border {
-  text-align: left;
-  border: 1px solid black;
-  length: 10px;
-  padding: 2rem;
-  margin: 0rem;
-  font-family: -apple-system;
-  font-size: 12px;
-}
+
 
 /* top left text For Home Page image  */
 .top-left-hotel-location-input-img-load {
@@ -160,7 +154,7 @@ code {
   font-family: -BlinkMacSystemFont;
   position: absolute;
   left: 300px;
-  width: 700px;
+  width: 680px;
   color: black; 
   
 }

@@ -14,7 +14,7 @@ export default function AboutUs() {
                 <div class="our-story-image-text our-story-image-background ">
                     <section id="our-story">
                         <h2>Our Story</h2>
-                        <p>We are doing this as a dedicated project for a course called CS270 Software Development Practices, AKA Powerpoint Class</p>
+                        <p>We are doing this as a dedicated project for a course called CS270 Software Development Practices.This project was made to help us learn skills that only can come with from working with a team on a project.</p>
                         
                     </section>
                 </div>

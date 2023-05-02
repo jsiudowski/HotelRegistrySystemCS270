@@ -12,6 +12,7 @@ export default function SandwichEasterEgg() {
                 width={600} height={500} alt="Sammy.gif"></img>
             </div>
             <h2>Eat it</h2>
+            <h3>WE CHARGE FOR THE SANDWHICH THOUGH!!!!!</h3>
 
         </div>
     )

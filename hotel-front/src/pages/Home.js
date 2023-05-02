@@ -47,10 +47,10 @@ const navigateToSandwichEasterEgg = () => {
               <img src="https://news.mit.edu/sites/default/files/images/201306/20130603150017-0.jpg"width={940} height={700} alt="">
               </img>
             </div>
-            <div class="bottom-img-hotel-creation-input-img-load">Publish a Location:
+            <div class="bottom-img-hotel-creation-input-img-load">Register a Location:
             <div className='location'>
               <div className="col-mid-6 offset-mid-3 border rounded p-4 mt-2 shadow">
-              <h2>Hotel's Location?</h2>
+              <h2>New Location?</h2>
               <div className="mb-4">
                 <label htmlFor="location" className="form-location"></label>
                 <button onClick={navigateToHotelCreator} className="hotel-creation-button-link" name="location">Create Hotel!</button>
@@ -65,14 +65,28 @@ const navigateToSandwichEasterEgg = () => {
         <div class ="sidebox-flex">
             <br></br>
             <div class = "sidebox-flex-items sidebox-item-1"> 
-            Choose a wide variety of rooms and services across multiple hotels
-            throughout our database!!</div>
-
+            <h1>Wide Variety Of:</h1>Rooms and Services
+            </div>
+            <div class = "sidebox-flex-items sidebox-item-1"> 
+            <h1>Easy to Use:</h1>
+            <p1>Small and Large business friendly </p1>
+            </div>
             <div class = "sidebox-flex-items"> 
             <button onClick={navigateToSandwichEasterEgg} className="easter-egg-button-link" name="location">
-            Countless options all easy to use with no fees necessary  </button>
+             NO FEES NECESSARY  </button>
+            </div>
+            
+            <div class = "sidebox-flex-items sidebox-item-1"> 
+            <h1>Huge Database:</h1>
+            <p1>Hundreds of hotels have registered</p1>
+            </div>
+
+            <div class = "sidebox-flex-items sidebox-item-1"> 
+            <h1>Free Battle Pass:</h1>
+            <p1>New Customers Only </p1>
             </div>
         </div>
+        
 
         </main>
       </div>
