@@ -48,6 +48,16 @@ export default function AboutUs() {
                 <footer>
                     <p>&copy; 2023 Infinite Room, Inc.</p>
                 </footer>
+
+                <br></br>
+
+                <div class ="bottom-black-border">
+                <p1>Some hotels require you to cancel more than 24 hours before check-in. Details on site.</p1> 
+                <br/>
+                <p2>© 2023 InfiniteRooms.com is an InfiniteLoop company. All rights reserved.
+        InfiniteRooms.com and the InfiniteRooms.com logo are trademarks or registered trademarks of InfiniteRooms.com, LP in the United States and/or other countries. All other trademarks are the property of their respective owners.</p2>
+                </div>
+
         </div>
     </div>
     );

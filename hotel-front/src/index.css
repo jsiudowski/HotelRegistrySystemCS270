@@ -66,7 +66,7 @@ code {
   display: flex;
   border-radius: 35px;
   padding: 20px 20px;
-  border-color: white;
+  border-color: rgb(255, 255, 255);
   color: white;
   background-color: transparent;
   cursor: pointer;
@@ -76,8 +76,9 @@ code {
   display: flex;
   border-radius: 35px;
   padding: 20px 70px;
-  color: blue;
-  background-color: black;
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -129,8 +130,24 @@ code {
 /* STUFF FOR ABOUTUS.JS */
 /*======================*/
 
+.bottom-black-border {
+  text-align: left;
+  border: 1px solid black;
+  position: static;
+  height: auto;
+  width: auto;
+  padding: 5rem;
+  margin: 1rem;
+  length: 10px;
+  padding: 2rem;
+  margin: 0rem;
+  font-family: -BlinkMacSystemFont;
+  background-color: lightblue;
+  font-size: 15px;
+}
+
 .our-story-image-background{
-  position: absolute;
+  position: static;
   border: 1px solid black;
   border-radius: 35px;
   top: 300px;
@@ -141,17 +158,20 @@ code {
 }
 .our-story-image-text{
   font-family: -BlinkMacSystemFont;
+  position: absolute;
+  left: 300px;
+  width: 700px;
   color: black; 
   
 }
 
 .text-backgrounds-about-us{
-  font: -apple-system;
+  font: -BlinkMacSystemFont;
   border: 1px solid black;
   background-color: lightblue;
   border-radius: 35px;
   position: relative;
-  left: 380px;
+  left: 300px;
   opacity: .95;
   margin:10px;
   padding: 10px;

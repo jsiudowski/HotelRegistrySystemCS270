@@ -30,7 +30,7 @@ const navigateToSandwichEasterEgg = () => {
           <div class="top-left-hotel-location-input-img-load">Find a Location:
           <div className='location'>
             <div className="col-mid-6 offset-mid-3 border rounded p-4 mt-2 shadow">
-            <h2>where to?</h2>
+            <h2>Where To?</h2>
             <div className="mb-4">
               <label htmlFor="location" className="form-location"></label>
              <button onClick={navigateToCustomerLanding} className="registry-button-link" name="location">Create Reservation!</button>
@@ -81,7 +81,6 @@ const navigateToSandwichEasterEgg = () => {
 
     </div>
 
-    </body>
-  </html>
+    
   )
 }  
