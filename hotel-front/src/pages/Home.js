@@ -75,6 +75,8 @@ const navigateToSandwichEasterEgg = () => {
         </div>
 
         </main>
+      </div>
+      <div>
       </div>  
 
     </div>
