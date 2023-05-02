@@ -4,7 +4,7 @@ import Hotel.Registry.System.hotelsystem.models.Employee;
 import Hotel.Registry.System.hotelsystem.models.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EmployeeRepository extends JpaRepository<Employee, Person>{
+public interface EmployeeRepository extends JpaRepository<Employee, Long>{
     //This is where we can communicate with the mySQL database
 
 }

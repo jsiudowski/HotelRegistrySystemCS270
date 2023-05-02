@@ -8,30 +8,23 @@ import jakarta.persistence.Id;
 @Entity
 public class Customer extends Person{
     //Primary key
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int customerId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long id;
     //Check dev notes, editing classes, for annotation meanings
-    public String customerName;
-    public int customerAge;
 
-    public Customer() {
-        super();
-        customerId = 0;
-    }
+    /*
+    //Testing using the default constructor as a fix for POSTMapping
 
-    public Customer(int customerId) {
-        this.customerId = customerId;
-    }
-
-    public Customer(int customerId, String name, int age, String address, boolean isEmployee) {
+    public Customer(Long customerId, String name, int age, String address, boolean isEmployee) {
         super(name, age, address, isEmployee);
-        this.customerId = customerId;
+        this.id = customerId;
+    }
+    */
+
+    public Long getCustomerID() {
+        return this.id;
     }
 
-    public int getCustomerID() {
-        return this.customerId;
-    }
-
-    public void setCustomerID(Customer customer, int newCustomerID) {
-        customer.customerId = newCustomerID;
+    public void setCustomerID(Long newCustomerID) {
+        this.id = newCustomerID;
     }
 }

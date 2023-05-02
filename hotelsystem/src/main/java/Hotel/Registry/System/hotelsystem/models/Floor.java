@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Floor {
     
     //Variables
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int floorId;
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long floorId;
     public @ManyToOne Hotel hotel;
 
     //Constructor
@@ -16,11 +16,11 @@ public class Floor {
     }
 
     //Methods
-    public int getFloorId(Hotel hotel) {
+    public Long getFloorId(Hotel hotel) {
         return this.floorId;
     }
 
-    public void setFloorId(Hotel hotel, int num) {
+    public void setFloorId(Hotel hotel, Long num) {
         this.floorId = num;
     }
 

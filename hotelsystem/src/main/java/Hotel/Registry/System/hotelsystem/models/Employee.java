@@ -6,68 +6,60 @@ import jakarta.persistence.*;
 public class Employee extends Person {
 
     //Primary key:
-    public @Id @GeneratedValue(strategy = GenerationType.AUTO) int employeeId;
-
+    public @Id @GeneratedValue(strategy = GenerationType.AUTO) Long employeeId;
     //Foreign Key
     public @ManyToOne Hotel hotel;
-
     public String position;
     private String ssn;
+    public Boolean isAdmin;
 
-    protected Employee()
-    {
-        position = "";
-        ssn = "";
-        //Person.employee = true;
-        //The compiler doesn't like this^
-    }
-
-    public Employee(Hotel hotel,  String position, String Ssn) {
-        this.hotel = hotel;
-        this.position = position;
-        this.ssn = Ssn;
-    }
 
     // employee Name 
-    public void setEmployeeName(Employee Employee, String newEmployeeName)
+    public void setEmployeeName(String newEmployeeName)
     {
-        Employee.name = newEmployeeName;
+        this.name = newEmployeeName;
     }
 
-    public String getEmployeeName(Employee Employee)
+    public String getEmployeeName()
     {
-        return Employee.name;
+        return this.name;
     }
     
     // employee Ssn 
-    private void setEmployeeSSN(Employee Employee, String Ssn)
+    public void setEmployeeSSN(String Ssn)
     {
-        Employee.ssn = Ssn;
+        this.ssn = Ssn;
     }
 
-    private String getEmployeeSSN(Employee Employee)
+    public String getEmployeeSSN()
     {
-        return Employee.ssn;
+        return this.ssn;
     }
 
     // employee ID 
-    public void setEmployeeID(Employee Employee, int employeeId) {
-        Employee.employeeId = employeeId;
+    public void setEmployeeID(Long employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public int getEmployeeID(Employee Employee) {
-        return Employee.employeeId;
+    public Long getEmployeeID() {
+        return this.employeeId;
     }
 
     // employee position 
 
-    public void setEmployeePosition(Employee Employee, String position) {
-        Employee.position = position ;
+    public void setEmployeePosition(String position) {
+        this.position = position ;
     }
 
-    public String getEmployeePosition(Employee Employee) {
-        return Employee.position;
-        
+    public String getEmployeePosition() {
+        return this.position;
     }
 
+    public Boolean getAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
 }

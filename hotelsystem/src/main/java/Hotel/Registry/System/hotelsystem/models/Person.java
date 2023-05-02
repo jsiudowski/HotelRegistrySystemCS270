@@ -7,30 +7,33 @@ public abstract class Person {
 
     public String name;
     public int age;
-    protected String address;
-    public boolean employee;
+    public String address;
+    public String userName;
+    public String password;
+
 
     public Person() {
         name = "";
         age = 0;
         address = "";
-        employee = false;
     }
 
-    public Person(String name, int age, String address, boolean employee) {
+    public Person(String name, int age, String address, String user, String pass) {
         this.name = name;
         this.age = age;
         this.address = address;
-        this.employee = employee;
-        
+        this.userName = user;
+        this.password = pass;
+
     }
+
 
     public void setName(Person person,String name) {
         person.name = name;
     }
 
-    public String getName(Person person) {
-        return person.name;
+    public String getName() {
+        return this.name;
     }
 
     public void setAddress(Person person, String address) {
@@ -49,11 +52,19 @@ public abstract class Person {
         return person.age;
     }
 
-    public void setEmployee(Person person, boolean employeeStatus) {
-        person.employee = employeeStatus;
+    public String getUserName() {
+        return userName;
     }
 
-    public boolean getEmployee(Person person) {
-        return person.employee;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
