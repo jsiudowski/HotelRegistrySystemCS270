@@ -19,7 +19,9 @@ export default function ContactUs() {
                         <span><strong>Email:</strong> infiniteloopcs270@gmail.com</span>
                         <br/>
                         <a href = "mailto: infiniteloopcs270@gmail.com">Email Us!</a>
-                        
+                        <br/><br/><br/>
+                        <img src="https://imageio.forbes.com/specials-images/imageserve/5b733f2f4bbe6f48a94dadde/0x0.jpg?format=jpg&height=345&width=700&fit=bounds"
+                        width ={900} height={450}></img>
                     </section>
                 </main>
             </div>
